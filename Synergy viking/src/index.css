@@ -8,8 +8,18 @@
   font-display: swap;
 }
 
-@theme {
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-mono/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
   --font-geist: 'Geist', sans-serif;
-  --color-header-bg: #00151C;
-  --color-btn-primary: #00B1F1;
+  --font-geist-mono: 'Geist Mono', monospace;
+  --font-pt-serif: 'PT Serif', serif;
 }
