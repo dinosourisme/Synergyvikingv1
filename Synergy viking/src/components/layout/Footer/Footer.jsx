@@ -52,12 +52,13 @@ export default function Footer() {
           Join offshore operators, naval contractors, and hyperbaric facilities worldwide who trust Synergy
         </p>
 
-        {/* Request a Consultation Button */}
+        {/* Request a Consultation Button - Fixed Hover */}
         <button
           type="button"
-          className="group relative inline-flex items-center h-[68px] pl-[18px] pr-2 bg-white rounded-[50px] overflow-hidden cursor-pointer"
+          className="group relative inline-flex items-center h-[68px] px-2 bg-white rounded-[50px] overflow-hidden cursor-pointer transition-all duration-300"
         >
-          <span className="relative flex items-center justify-center w-[52px] h-[52px] bg-[#BDE74E] rounded-full mr-3 transition-all duration-300 -order-1 group-hover:order-none">
+          {/* Arrow Circle - positioned absolutely, starts on right */}
+          <span className="absolute left-[18px] flex items-center justify-center w-[52px] h-[52px] bg-[#BDE74E] rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
             <svg
               width="22"
               height="20"
@@ -74,8 +75,29 @@ export default function Footer() {
               />
             </svg>
           </span>
-          <span className="text-base font-medium tracking-[-0.32px] text-[#1C1C1C] transition-all duration-300">
+
+          {/* Text - starts centered, shifts right on hover */}
+          <span className="text-base font-medium tracking-[-0.32px] text-[#1C1C1C] pl-[18px] pr-[70px] transition-all duration-300 group-hover:pl-[78px] group-hover:pr-[18px]">
             Request a Consultation
+          </span>
+
+          {/* Arrow Circle - default visible on right */}
+          <span className="absolute right-2 flex items-center justify-center w-[52px] h-[52px] bg-[#BDE74E] rounded-full transition-all duration-300 group-hover:opacity-0 group-hover:translate-x-2">
+            <svg
+              width="22"
+              height="20"
+              viewBox="0 0 22 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1 10H21M21 10L13 2M21 10L13 18"
+                stroke="black"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </span>
         </button>
       </div>
