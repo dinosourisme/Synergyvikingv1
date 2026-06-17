@@ -50,7 +50,7 @@ export default function Services() {
   return (
     <div className="w-full bg-white font-geist">
       {/* Hero Section */}
-      <section className="relative w-full bg-[#00151C] pt-[130px] pb-[120px] px-10">
+      <section className="relative w-full bg-[#00151C] pt-[10px] pb-[120px] px-10">
         {/* Label */}
         <div className="flex items-center gap-[17px] mb-8">
           <div className="w-3 h-3 bg-[#00B1F1]" />
@@ -64,9 +64,9 @@ export default function Services() {
 
         {/* Heading */}
         <h2
-          className="max-w-[1051px] ml-[289px] text-[60px] leading-[72px] tracking-[-2.2px] text-white font-normal"
-          style={{ fontFamily: "'PT Serif', serif" }}
-        >
+  className="max-w-[1051px] ml-[370px] text-[60px] leading-[72px] tracking-[-2.2px] text-white font-normal"
+  style={{ fontFamily: "'PT Serif', serif" }}
+>
           Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
         </h2>
       </section>
