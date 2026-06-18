@@ -222,7 +222,7 @@ export default function Footer() {
             className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-[#BDBDC2] font-geist-mono"
             
           >
-            All right reserve @2025
+            All right reserve @2026
           </p>
           <p
             className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-[#BDBDC2] font-geist-mono"
