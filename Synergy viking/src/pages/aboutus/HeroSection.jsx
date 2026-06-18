@@ -16,20 +16,27 @@ function HeroSection() {
   return (
     <section className="bg-white">
       {/* Dark intro block */}
-      <div className="bg-brand-navy px-6 sm:px-10 pt-28 pb-16 md:pt-10 md:pb-20">
-        <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-start gap-6 md:gap-20">
-          <div className="flex items-center gap-[17px] shrink-0 md:pt-2">
-            <span className="w-3 h-3 bg-brand-sky inline-block" />
-            <span className="font-geist-mono font-normal text-lg leading-[21px] tracking-tightmono uppercase text-white">
-              Product
-            </span>
-          </div>
-          <h1 className="md:ml-25 font-ptserif font-normal text-white text-[36px] sm:text-[48px] md:text-[60px] leading-[1.2] tracking-tightest2 max-w-[1100px]">
-            We are redefining how goods move with the right technology and a
-            commitment to dependable transportation
-          </h1>
+      
+      <section className="relative w-full bg-[#00151C] h-[470px] pt-[7px] pb-[120px] px-10">
+        {/* Label */}
+        <div className="flex items-center gap-[17px] mb-8">
+          <div className="w-3 h-3 bg-[#00B1F1]" />
+          <span
+            className="text-lg leading-[21px] tracking-[-0.28px] uppercase text-white"
+            style={{ fontFamily: "'Geist Mono', monospace" }}
+          >
+            About us
+          </span>
         </div>
-      </div>
+
+        {/* Heading */}
+        <h2
+          className="max-w-[1051px] ml-[385px] text-[60px] leading-[72px] tracking-[-2.2px] text-white font-normal"
+          style={{ fontFamily: "'PT Serif', serif" }}
+        >
+          We are redefining how goods move with the right technology and a commitment to dependable transportation.
+        </h2>
+      </section>
 
       {/* Images + paragraph */}
       <div
