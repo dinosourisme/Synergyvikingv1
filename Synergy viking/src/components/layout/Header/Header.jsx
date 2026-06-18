@@ -23,7 +23,7 @@ export default function Header() {
           <Link
             key={item.label}
             to={item.to}
-            className="group relative text-base font-medium text-white tracking-[-0.32px] leading-6 transition-opacity duration-200 hover:!opacity-100"
+            className="group relative text-base font-medium font-geist text-white tracking-[-0.32px] leading-6 transition-opacity duration-200 hover:!opacity-100"
           >
             {item.label}
             <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
