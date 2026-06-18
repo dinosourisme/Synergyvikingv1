@@ -1,67 +1,8 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import {productsData} from '../../pages/productDetail/data/productData.js'
 
-// Product data array - easily add more products here
-const productsData = [
-  {
-    id: 'atex-single-bucket-lars',
-    title: 'ATEX Compliant Single Bucket LARS - 2 Divers',
-    images: [
-      '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-      '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-      '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-      '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-    ],
-    tag: 'LARS',
-  },
-  {
-    id: 'catex-twin-bucket-lars',
-    title: 'ATEX Compliant Twin Bucket LARS - 2 Divers',
-    images: [
-      '/src/assets/products/ATEX Twin Basket LARS.svg',
-      '/src/assets/products/ATEX Twin Basket LARS.svg',
-      '/src/assets/products/ATEX Twin Basket LARS.svg',
-      '/src/assets/products/ATEX Twin Basket LARS.svg',
-    ],
-    tag: 'LARS',
-  },
-  // {
-  //   id: 'atex-twin-basket-lars-2',
-  //   title: 'ATEX Compliant Twin Basket LARS - 2 Divers',
-  //   images: [
-  //     '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
-  //     '/src/assets/products/IMG_6698.jpg',
-  //   ],
-  //   tag: 'LARS',
-  // },
-  // {
-  //   id: 'atex-twin-basket-lars-3',
-  //   title: 'ATEX Compliant Twin Basket LARS - 3 Divers',
-  //   images: [
-  //     '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
-  //     '/src/assets/products/IMG_9830.png',
-  //   ],
-  //   tag: 'Market Trends',
-  // },
-  // {
-  //   id: 'brush-kart',
-  //   title: 'Brush Kart',
-  //   images: [
-  //     '/src/assets/products/Brush Kart pp.png',
-  //     '/src/assets/products/IMG_6698.jpg',
-  //   ],
-  //   tag: 'BRUSH KART',
-  // },
-  // {
-  //   id: 'diesel-engine-power-pack',
-  //   title: 'Diesel Engine Power Pack',
-  //   images: [
-  //     '/src/assets/products/IMG_9830.png',
-  //     '/src/assets/products/Brush Kart pp.png',
-  //   ],
-  //   tag: 'LARS',
-  // },
-];
+
 
 export default function Products() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -250,17 +191,17 @@ export default function Products() {
                         onClick={(e) =>
                           nextImage(product.id, product.images.length, e)
                         }
-                        className="w-4 h-4 bg-white rounded-full flex items-center justify-center cursor-pointer z-10"
+                        className="w-5 h-5 bg-black rounded-full flex items-center justify-center cursor-pointer z-10"
                       >
                         <svg
-                          width="10"
-                          height="10"
-                          viewBox="0 0 10 10"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
                           fill="none"
                         >
                           <path
-                            d="M3 1L7 5L3 9"
-                            stroke="black"
+                            d="M4 1L9 6L4 11"
+                            stroke="white"
                             strokeWidth="1.5"
                             strokeLinecap="round"
                             strokeLinejoin="round"

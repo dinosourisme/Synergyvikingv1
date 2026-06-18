@@ -1,32 +1,7 @@
 import { useEffect, useRef } from 'react';
-import logo from '../../assets/services/Container.svg';
+import {partners} from './data/partners.js';
+import {services} from './data/service.js'
 
-const services = [
-  {
-    number: '01',
-    title: 'SILO Load Testing',
-    description:
-      'Certified structural integrity and load testing for offshore containers, diving chambers, and subsea enclosures. Tested, documented, and ready for operation. Certified structural integrity and load testing for offshore containers, diving chambers, and subsea enclosures. Tested, documented, and ready for operation. Certified structural integrity and load testing for offshore containers, diving chambers, and subsea enclosures. Tested, documented, and ready for operation.',
-    image: logo,
-  },
-  {
-    number: '02',
-    title: 'Chamber Outfitting',
-    description:
-      'Full systems outfitting for hyperbaric and decompression chambers - gas panels, communications, lighting, and medical equipment, installed and commissioned by our team. Tested, documented, and ready for operation. Certified structural integrity and load testing for offshore containers, diving chambers, and subsea enclosures. Tested, documented, and ready for operation.',
-    image: logo,
-  },
-];
-
-const partners = [
-  { logo: "url1", name: "Logoipsum" },
-  { logo: "url2", name: "Logoipsum" },
-  { logo: "url3", name: "logoipsum" },
-  { logo: "url4", name: "logoipsum" },
-  { logo: "url5", name: "Logoipsum" },
-  { logo: "url6", name: "logoipsum" },
-  { logo: "url7", name: "Logoipsum" },
-];
 
 export default function Services() {
   const marqueeRef = useRef(null);
