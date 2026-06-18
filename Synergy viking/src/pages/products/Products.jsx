@@ -214,8 +214,7 @@ export default function Products() {
                     {/* Tag Badge */}
                     <div className="absolute top-4 left-4 px-[10px] py-[6px] bg-[rgba(28,28,28,0.2)] rounded">
                       <span
-                        className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-white"
-                        style={{ fontFamily: "'Geist Mono', monospace" }}
+                        className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-white font-geist-mono font-normal"
                       >
                         {product.tag}
                       </span>
