@@ -43,12 +43,12 @@ export default function Footer() {
       {/* CTA Content - positioned over the gradient transition */}
       <div className="relative z-10 -mt-[200px] text-center px-10">
         <h2
-          className="max-w-[1018px] mx-auto text-[60px] leading-[72px] tracking-[-2.2px] text-white font-normal mb-6"
-          style={{ fontFamily: "'PT Serif', serif" }}
+          className="max-w-[1018px] mx-auto text-[60px] leading-[72px] tracking-[-2.2px] text-white font-normal font-ptserif mb-6"
+          
         >
           Ready to take your diving operation to the next level with certified, precision-built equipment?
         </h2>
-        <p className="max-w-[756px] mx-auto text-lg leading-[27px] tracking-[-0.36px] text-white mb-8">
+        <p className="max-w-[756px] mx-auto text-lg leading-[27px] tracking-[-0.36px] text-white mb-8 font-geist font-normal">
           Join offshore operators, naval contractors, and hyperbaric facilities worldwide who trust Synergy
         </p>
 
@@ -77,7 +77,7 @@ export default function Footer() {
           </span>
 
           {/* Text - starts centered, shifts right on hover */}
-          <span className="text-base font-medium tracking-[-0.32px] text-[#1C1C1C] pl-[18px] pr-[70px] transition-all duration-300 group-hover:pl-[78px] group-hover:pr-[18px]">
+          <span className="text-base font-medium font-geist tracking-[-0.32px] text-[#1C1C1C] pl-[18px] pr-[70px] transition-all duration-300 group-hover:pl-[78px] group-hover:pr-[18px]">
             Request a Consultation
           </span>
 
@@ -112,8 +112,7 @@ export default function Footer() {
           {/* Sitemap */}
           <div className="w-[544px]">
             <h3
-              className="text-sm leading-[21px] font-medium uppercase text-[#BDBDC2] mb-[29px]"
-              style={{ fontFamily: "'Geist Mono', monospace" }}
+              className="text-sm leading-[21px] font-medium font-geist-mono uppercase text-[#BDBDC2] mb-[29px]"
             >
               SITEMAP
             </h3>
@@ -123,7 +122,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     to={link.to}
-                    className="relative text-base font-medium tracking-[-0.32px] leading-6 text-white group w-fit"
+                    className="relative text-base font-medium font-geist tracking-[-0.32px] leading-6 text-white group w-fit"
                   >
                     {link.label}
                     <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
@@ -135,7 +134,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     to={link.to}
-                    className="relative text-base font-medium tracking-[-0.32px] leading-6 text-white group w-fit"
+                    className="relative text-base font-medium font-geist tracking-[-0.32px] leading-6 text-white group w-fit"
                   >
                     {link.label}
                     <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
@@ -149,14 +148,14 @@ export default function Footer() {
           <div className="w-[314px] flex flex-col gap-[29px]">
             <div>
               <h3
-                className="text-sm leading-[21px] font-medium uppercase text-[#BDBDC2] mb-[29px]"
-                style={{ fontFamily: "'Geist Mono', monospace" }}
+                className="text-sm leading-[21px] font-medium font-geist-mono uppercase text-[#BDBDC2] mb-[29px]"
+                
               >
                 EMAIL & SUPPORT
               </h3>
               <a
                 href="mailto:hello@synergyviking.com"
-                className="relative text-base font-medium tracking-[-0.32px] leading-6 text-white group w-fit inline-block"
+                className="relative text-base font-medium font-geist tracking-[-0.32px] leading-6 text-white group w-fit inline-block"
               >
                 hello@synergyviking.com
                 <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
@@ -165,8 +164,8 @@ export default function Footer() {
 
             <div>
               <h3
-                className="text-sm leading-[21px] font-medium uppercase text-[#BDBDC2] mb-[29px]"
-                style={{ fontFamily: "'Geist Mono', monospace" }}
+                className="text-sm leading-[21px] font-medium font-geist-mono uppercase text-[#BDBDC2] mb-[29px]"
+                
               >
                 PHONE
               </h3>
@@ -181,8 +180,8 @@ export default function Footer() {
 
             <div>
               <h3
-                className="text-sm leading-[21px] font-medium uppercase text-[#BDBDC2] mb-[29px]"
-                style={{ fontFamily: "'Geist Mono', monospace" }}
+                className="text-sm leading-[21px] font-medium font-geist-mono uppercase text-[#BDBDC2] mb-[29px]"
+                
               >
                 ADDRESS
               </h3>
@@ -195,8 +194,8 @@ export default function Footer() {
           {/* Social */}
           <div className="w-[210px]">
             <h3
-              className="text-sm leading-[21px] font-medium uppercase text-[#BDBDC2] mb-[29px]"
-              style={{ fontFamily: "'Geist Mono', monospace" }}
+              className="text-sm leading-[21px] font-medium font-geist-mono uppercase text-[#BDBDC2] mb-[29px]"
+              
             >
               SOCIAL
             </h3>
@@ -220,14 +219,14 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex justify-between items-center mt-[151px] pb-10">
           <p
-            className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-[#BDBDC2]"
-            style={{ fontFamily: "'Geist Mono', monospace" }}
+            className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-[#BDBDC2] font-geist-mono"
+            
           >
             All right reserve @2025
           </p>
           <p
-            className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-[#BDBDC2]"
-            style={{ fontFamily: "'Geist Mono', monospace" }}
+            className="text-sm leading-[21px] tracking-[-0.28px] uppercase text-[#BDBDC2] font-geist-mono"
+            
           >
             Made by INfidhi
           </p>
