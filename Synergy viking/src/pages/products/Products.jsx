@@ -48,7 +48,7 @@ export default function Products() {
         </div>
 
         {/* Heading */}
-        <h2 className="max-w-full lg:max-w-[1051px] lg:ml-[370px] text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] leading-tight md:leading-[1.2] lg:leading-[72px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal font-ptserif">
+        <h2 className="max-w-full lg:max-w-[1051px] lg:ml-[205px] text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] leading-tight md:leading-[1.2] lg:leading-[72px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal font-ptserif">
           Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
         </h2>
       </section>
