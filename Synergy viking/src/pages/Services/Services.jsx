@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react';
 import logo from '../../assets/services/Container.svg';
-import sample_image from '../../assets/Services/Volkwagen.jpg'
 
 const services = [
   {
