@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <div className="w-full font-geist">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[100dvh] flex flex-col overflow-hidden bg-brand-navy">
+      <section className="relative w-full min-h-[520px] sm:min-h-[580px] md:min-h-[640px] lg:min-h-0 lg:aspect-[1304/863] flex flex-col overflow-hidden bg-brand-navy">
         {/* Background Image */}
         <img
           src={heroBg}
@@ -135,14 +135,14 @@ export default function Home() {
         />
 
         {/* Header spacer */}
-        <div className="h-16 sm:h-18 md:h-20 shrink-0" />
+        <div className="h-16 sm:h-[4.5rem] md:h-20 shrink-0" />
 
         {/* Main content area */}
-        <div className="relative flex-1 flex flex-col justify-center px-5 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-12 md:py-16">
-          <div className="max-w-[2000px] -translate-y-40 mx-auto w-full relative">
+        <div className="relative flex-1 flex flex-col justify-center px-5 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-12 lg:py-16">
+          <div className="max-w-[2000px] mx-auto w-full relative lg:-translate-y-40">
             {/* Sidebar label — horizontal on mobile, left sidebar on lg+ */}
-            <div className="mb-4 sm:mb-6 lg:mb-0 lg:absolute lg:left-0 lg:top-0">
-              <p className="text-white uppercase font-geist-mono font-medium text-sm sm:text-base md:text-lg leading-[20px] sm:leading-[24px] md:leading-[26px] tracking-wide">
+            <div className="mb-3 sm:mb-4 lg:mb-0 lg:absolute lg:left-0 lg:top-0">
+              <p className="text-white uppercase font-geist-mono font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-[18px] sm:leading-[20px] md:leading-[24px] lg:leading-[26px] tracking-wide">
                 COMMERCIAL
                 <span className="mx-2 lg:hidden">·</span>
                 <br className="hidden lg:block" />
@@ -155,11 +155,11 @@ export default function Home() {
 
             {/* Hero copy */}
             <div className="lg:ml-[300px] xl:ml-[340px] lg:max-w-[688px]">
-              <div className="flex flex-col gap-1 sm:gap-2 mb-6 sm:mb-8 md:mb-10">
-                <h1 className="text-white font-ptserif font-normal text-[36px] sm:text-[44px] md:text-[52px] lg:text-[56px] xl:text-[60px] leading-[1.2] sm:leading-[1.15] md:leading-[1.1] lg:leading-[84px] tracking-[-1.2px] sm:tracking-[-1.6px] md:tracking-[-2px] xl:tracking-[-2.2px]">
+              <div className="flex flex-col gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+                <h1 className="text-white font-ptserif font-normal text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.15] sm:leading-[1.15] md:leading-[1.1] lg:leading-[84px] tracking-[-1px] sm:tracking-[-1.4px] md:tracking-[-1.8px] xl:tracking-[-2.2px]">
                   Synergy Viking
                 </h1>
-                <p className="uppercase font-geist font-medium text-[18px] sm:text-[24px] md:text-[32px] lg:text-[38px] xl:text-[40.5px] leading-[1.2] sm:leading-[1.15] md:leading-[1.1] lg:leading-[44px] tracking-[-0.5px] sm:tracking-[-0.7px] md:tracking-[-1px] text-white/80">
+                <p className="uppercase font-geist font-medium text-[16px] sm:text-[20px] md:text-[28px] lg:text-[38px] xl:text-[40.5px] leading-[1.2] sm:leading-[1.15] md:leading-[1.1] lg:leading-[44px] tracking-[-0.3px] sm:tracking-[-0.6px] md:tracking-[-0.8px] text-white/80">
                   WHERE PRECISION MEETS THE DEEP.
                 </p>
               </div>
@@ -176,9 +176,9 @@ export default function Home() {
         </div>
 
         {/* Bottom bar */}
-        <div className="relative w-full border-t border-white/30">
-          <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-5 md:py-6 lg:py-8 lg:pl-[300px]">
-            <p className="text-white font-geist font-medium text-sm sm:text-base md:text-lg leading-[22px] sm:leading-[24px] md:leading-[27px] tracking-[-0.2px] md:tracking-[-0.36px]">
+        <div className="relative w-full border-t border-white/30 shrink-0">
+          <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 py-3 sm:py-4 md:py-5 lg:py-8 lg:pl-[300px]">
+            <p className="text-white font-geist font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-[20px] sm:leading-[22px] md:leading-[24px] lg:leading-[27px] tracking-[-0.1px] sm:tracking-[-0.15px] md:tracking-[-0.2px] lg:tracking-[-0.36px]">
               Synergy is the India&apos;s leading manufacturer and supplier of commercial diving equipment - trusted by offshore operators, navies, and diving contractors across 4 continents since 2000.
             </p>
           </div>
