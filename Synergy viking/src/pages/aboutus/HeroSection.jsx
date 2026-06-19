@@ -15,7 +15,7 @@ function HeroSection() {
   return (
     <section className="bg-white">
       {/* Dark intro block */}
-      <section className="relative w-full bg-[#00151C] pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-[7px] lg:pb-[120px] lg:px-10">
+      <section className="relative w-full bg-[#00151C] h-[470px] pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-[7px] lg:pb-[120px] lg:px-10">
         {/* Label */}
         <div className="flex items-center gap-3 md:gap-[17px] mb-6 md:mb-8">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
