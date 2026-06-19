@@ -7,6 +7,7 @@ import AboutUsPage from "./pages/aboutus/main.jsx";
 import Products from "./pages/products/Products.jsx";
 import ProductDetail from "./pages/productDetail/ProductDetails.jsx"
 import Home from './pages/homepage/HomePage.jsx'
+import ContactPage from './pages/contactpage/contactpage.jsx'
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
         <Route path="/about" element={<AboutUsPage/>} />
-        <Route path="/contact" element={<div className="p-10 text-white">Contact Page</div>} />
+        <Route path="/contact" element={<ContactPage/>} />
       </Routes>
       <Footer />
     </BrowserRouter>
