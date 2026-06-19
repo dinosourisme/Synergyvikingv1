@@ -1,4 +1,3 @@
-
 import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import heroBg from '../../assets/home/hero_bg.svg';
@@ -14,9 +13,9 @@ import productImg3 from '../../assets/home/timeline_1.svg';
 import React from 'react';
 
 const stats = [
-  { number: '08+', description: 'Years of experience delivering certified diving equipment to global offshore operations' },
-  { number: '04', description: 'Continents served with our precision-built diving systems and support equipment' },
-  { number: '24/7', description: 'Technical support and emergency response for all deployed equipment worldwide' },
+  { number: '08+', description: 'Products across our range, covering everything from hyperbaric chambers and dive stations to personal diver gear and underwater tools.' },
+  { number: '04', description: 'Continents supplied with certified, MCA-compliant diving equipment, shipped from our Dubai facility to wherever your operations demand.' },
+  { number: '24/7', description: 'Dedicated support and an extensive spares inventory, ensuring your equipment stays operational when it matters most.' },
 ];
 
 const servicesPreview = [
@@ -35,7 +34,7 @@ const servicesPreview = [
 const visionCards = [
   {
     title: 'Precision Engineering',
-    description: 'We eliminate inefficiencies by synchronizing every stage of your diving operation with precision-engineered equipment.',
+    description: 'We design and build every piece of equipment to meet the highest standards of safety and performance, ensuring reliability in the most demanding underwater environments.',
     bg: 'bg-[#00B1F1]',
     textColor: 'text-white',
   },
@@ -127,7 +126,7 @@ export default function Home() {
   return (
     <div className="w-full font-geist">
       {/* Hero Section */}
-      <section className="relative w-full h-screen overflow-hidden">
+      <section className="relative w-full min-h-[100dvh] flex flex-col overflow-hidden bg-brand-navy">
         {/* Background Image */}
         <img
           src={heroBg}
@@ -135,46 +134,62 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
 
-        {/* Vertical Sidebar Label */}
-        <div className="absolute left-10 top-[119px] w-[175px]">
-          <span className="font-geist-mono text-lg leading-[26px] uppercase text-white [text-orientation:mixed] rotate-180">
-            COMMERCIAL DIVING EQUIPMENT
-          </span>
+        {/* Header spacer */}
+        <div className="h-16 sm:h-18 md:h-20 shrink-0" />
+
+        {/* Main content area */}
+        <div className="relative flex-1 flex flex-col justify-center px-5 sm:px-6 md:px-8 lg:px-10 py-8 sm:py-12 md:py-16">
+          <div className="max-w-[2000px] -translate-y-40 mx-auto w-full relative">
+            {/* Sidebar label — horizontal on mobile, left sidebar on lg+ */}
+            <div className="mb-4 sm:mb-6 lg:mb-0 lg:absolute lg:left-0 lg:top-0">
+              <p className="text-white uppercase font-geist-mono font-medium text-sm sm:text-base md:text-lg leading-[20px] sm:leading-[24px] md:leading-[26px] tracking-wide">
+                COMMERCIAL
+                <span className="mx-2 lg:hidden">·</span>
+                <br className="hidden lg:block" />
+                DIVING
+                <span className="mx-2 lg:hidden">·</span>
+                <br className="hidden lg:block" />
+                EQUIPMENT
+              </p>
+            </div>
+
+            {/* Hero copy */}
+            <div className="lg:ml-[300px] xl:ml-[340px] lg:max-w-[688px]">
+              <div className="flex flex-col gap-1 sm:gap-2 mb-6 sm:mb-8 md:mb-10">
+                <h1 className="text-white font-ptserif font-normal text-[36px] sm:text-[44px] md:text-[52px] lg:text-[56px] xl:text-[60px] leading-[1.2] sm:leading-[1.15] md:leading-[1.1] lg:leading-[84px] tracking-[-1.2px] sm:tracking-[-1.6px] md:tracking-[-2px] xl:tracking-[-2.2px]">
+                  Synergy Viking
+                </h1>
+                <p className="uppercase font-geist font-medium text-[18px] sm:text-[24px] md:text-[32px] lg:text-[38px] xl:text-[40.5px] leading-[1.2] sm:leading-[1.15] md:leading-[1.1] lg:leading-[44px] tracking-[-0.5px] sm:tracking-[-0.7px] md:tracking-[-1px] text-white/80">
+                  WHERE PRECISION MEETS THE DEEP.
+                </p>
+              </div>
+
+              <Link
+                to="/contact"
+                className="group inline-flex items-center justify-center h-10 px-6 bg-[#00B1F1] rounded-full text-white font-geist font-semibold text-sm sm:text-base leading-6 tracking-[-0.32px] shadow-[0px_2px_2.667px_-0.667px_rgba(42,42,42,0.1),0px_0.667px_0.667px_rgba(42,42,42,0.08),inset_0px_2px_2px_rgba(255,255,255,0.1)] active:scale-95 transition-transform hover:scale-105"
+              >
+                Get a Quote
+                <span className="ml-1.5 h-1.5 bg-white rounded-full transition-all duration-300 w-0 opacity-0 lg:group-hover:w-1.5 lg:group-hover:opacity-100" />
+              </Link>
+            </div>
+          </div>
         </div>
 
-        {/* Hero Content */}
-        <div className="absolute left-[340px] top-[99px]">
-          <h1 className="font-ptserif text-[60px] leading-[84px] tracking-[-2.2px] text-white font-normal mb-1">
-            Synergy viking
-          </h1>
-          <p className="text-[40.5px] leading-[44px] tracking-[-1px] uppercase text-white/80 font-medium">
-            Where Precision Meets the Deep.
-          </p>
-        </div>
-
-        {/* Get a Quote Button */}
-        <Link
-          to="/contact"
-          className="absolute left-[340px] top-[260px] inline-flex items-center justify-center h-10 px-5 bg-[#00B1F1] rounded-[100px] shadow-[0px_2px_2.667px_-0.667px_rgba(42,42,42,0.1),0px_0.667px_0.667px_rgba(42,42,42,0.08),inset_0px_2px_2px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
-        >
-          <span className="text-base font-semibold text-white tracking-[-0.32px] leading-6">
-            Get a Quote
-          </span>
-        </Link>
-
-        {/* Bottom Bar */}
-        <div className="absolute bottom-0 left-[300px] right-10 h-[88px] flex items-center justify-center border-t border-white">
-          <p className="text-lg leading-[27px] tracking-[-0.36px] text-white font-medium max-w-[1060px] text-center">
-            Synergy is the India’s leading manufacturer and supplier of commercial diving equipment - trusted by offshore operators, navies, and diving contractors across 4 continents since 2000.
-          </p>
+        {/* Bottom bar */}
+        <div className="relative w-full border-t border-white/30">
+          <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-5 md:py-6 lg:py-8 lg:pl-[300px]">
+            <p className="text-white font-geist font-medium text-sm sm:text-base md:text-lg leading-[22px] sm:leading-[24px] md:leading-[27px] tracking-[-0.2px] md:tracking-[-0.36px]">
+              Synergy is the India&apos;s leading manufacturer and supplier of commercial diving equipment - trusted by offshore operators, navies, and diving contractors across 4 continents since 2000.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Introduction Section */}
-      <section className="relative w-full bg-white py-[60px] px-10">
-        <div className="flex justify-between items-center gap-12 max-w-[1440px] mx-auto">
+      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[60px] px-5 sm:px-6 md:px-8 lg:px-10">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 sm:gap-12 lg:gap-12 max-w-[1440px] mx-auto">
           {/* Left Image */}
-          <div className="w-[680px] h-[656px] rounded-md overflow-hidden shrink-0">
+          <div className="w-full lg:w-1/2 xl:w-[680px] aspect-[680/656] rounded-md overflow-hidden shrink-0">
             <img
               src={introImage}
               alt="Introduction"
@@ -183,26 +198,26 @@ export default function Home() {
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col gap-[60px] w-[632px]">
-            <h2 className="font-ptserif text-[30px] leading-[40px] tracking-[-0.4px] text-[#121212] font-normal">
-              Experience a seamless, uninterrupted flow from the surface to the seabed with our comprehensive diving solutions.
+          <div className="flex flex-col gap-8 sm:gap-10 lg:gap-[60px] w-full lg:w-1/2 xl:w-[632px]">
+            <h2 className="font-ptserif text-xl sm:text-2xl md:text-[26px] lg:text-[30px] leading-[1.4] sm:leading-[1.35] md:leading-[40px] tracking-[-0.3px] md:tracking-[-0.4px] text-[#121212] font-normal">
+              Experience a complete, uncompromising approach to commercial diving equipment ; from first design brief to final delivery, backed by a team that stays with you long after the job is done.
             </h2>
 
-            <div className="flex flex-col gap-[50px]">
+            <div className="flex flex-col gap-8 sm:gap-10 lg:gap-[50px]">
               {/* Stats */}
-              <div className="flex flex-col gap-7">
+              <div className="flex flex-col gap-6 sm:gap-7">
                 {stats.map((stat, index) => (
                   <div key={index}>
-                    <div className="flex justify-between items-start gap-[147px]">
-                      <span className="font-ptserif text-[48px] leading-[58px] tracking-[-2.4px] text-[#121212] font-normal shrink-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 md:gap-8 lg:gap-[60px]">
+                      <span className="font-ptserif text-3xl sm:text-4xl md:text-[48px] leading-[1.2] sm:leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.4px] text-[#121212] font-normal shrink-0">
                         {stat.number}
                       </span>
-                      <p className="text-lg leading-6 tracking-[-0.3px] text-[#5E5E5E] w-[425px]">
+                      <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-[24px] md:leading-[27px] tracking-[-0.2px] sm:tracking-[-0.3px] text-[#5E5E5E] w-full sm:max-w-[425px]">
                         {stat.description}
                       </p>
                     </div>
                     {index < stats.length - 1 && (
-                      <div className="w-full h-px bg-[#C6C7CC] mt-7" />
+                      <div className="w-full h-px bg-[#C6C7CC] mt-6 sm:mt-7" />
                     )}
                   </div>
                 ))}
@@ -211,10 +226,10 @@ export default function Home() {
               {/* Learn More Button */}
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center w-[191px] h-10 bg-black rounded-[100px] shadow-[0px_2px_2.667px_-0.667px_rgba(42,42,42,0.1),0px_0.667px_0.667px_rgba(42,42,42,0.08),inset_0px_2px_2px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center w-full sm:w-[191px] h-10 bg-black rounded-full shadow-[0px_2px_2.667px_-0.667px_rgba(42,42,42,0.1),0px_0.667px_0.667px_rgba(42,42,42,0.08),inset_0px_2px_2px_rgba(255,255,255,0.1)] active:scale-95 transition-transform hover:scale-105"
               >
                 <span className="text-base font-semibold text-white tracking-[-0.32px] leading-6">
-                  Learn More about us
+                  Learn more about us
                 </span>
               </Link>
             </div>
@@ -223,15 +238,51 @@ export default function Home() {
       </section>
 
       {/* Services Preview Section */}
-      <section className="relative w-full bg-[#00151C] py-[50px] px-10">
+      <section className="relative w-full bg-[#00151C] py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="font-ptserif text-[60px] leading-[84px] tracking-[-2.2px] text-white font-normal mb-[34px]">
+          <h2 className="font-ptserif text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.2] sm:leading-[1.15] md:leading-[84px] tracking-[-1.2px] sm:tracking-[-1.6px] md:tracking-[-2.2px] text-white font-normal mb-6 sm:mb-8 lg:mb-[34px]">
             Services
           </h2>
 
-          <div className="w-full h-px bg-[#C6C7CC] mb-[54px]" />
+          <div className="w-full h-px bg-[#C6C7CC] mb-8 sm:mb-10 lg:mb-[54px]" />
 
-          <div className="grid grid-cols-[120px_minmax(0,1fr)_408px] gap-x-[60px] gap-y-[64px] items-start">
+          {/* Mobile/Tablet: Image on top, then compact services */}
+          <div className="lg:hidden">
+            {/* Image */}
+            <div className="w-full aspect-[408/433] rounded-md overflow-hidden mb-8 sm:mb-10">
+              <img
+                src={servicesImage}
+                alt="Services"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {servicesPreview.map((service, index) => (
+              <div key={service.number} className={`${index > 0 ? 'mt-8 sm:mt-10 pt-8 sm:pt-10 border-t border-white/20' : ''}`}>
+                <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                  <span className="text-sm sm:text-base font-medium text-white/60">{service.number}</span>
+                  <h3 className="text-xl sm:text-2xl md:text-[28px] leading-[1.2] sm:leading-[1.15] tracking-[-0.8px] sm:tracking-[-1.2px] font-medium text-white">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-sm sm:text-base md:text-[17px] leading-[22px] sm:leading-[24px] md:leading-[26px] tracking-[-0.2px] sm:tracking-[-0.3px] text-white/80">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+
+            <Link
+              to="/services"
+              className="mt-8 sm:mt-10 inline-flex items-center justify-center w-full h-12 px-5 bg-white rounded-full active:scale-95 transition-transform hover:scale-105"
+            >
+              <span className="text-base font-medium text-[#1C1C1C] tracking-[-0.32px] leading-6">
+                Explore Our Services
+              </span>
+            </Link>
+          </div>
+
+          {/* Desktop: 3-column grid */}
+          <div className="hidden lg:grid lg:grid-cols-[120px_minmax(0,1fr)_408px] lg:gap-x-[60px] lg:gap-y-[64px] lg:items-start">
             {servicesPreview.map((service, index) => (
               <React.Fragment key={service.number}>
                 <div className="text-[48px] leading-none tracking-[-2.4px] font-medium text-white pt-1">
@@ -259,7 +310,7 @@ export default function Home() {
 
                     <Link
                       to="/services"
-                      className="inline-flex items-center justify-center h-10 px-5 bg-white rounded-[100px] transition-transform duration-300 hover:scale-105"
+                      className="inline-flex items-center justify-center h-10 px-5 bg-white rounded-full transition-transform duration-300 hover:scale-105"
                     >
                       <span className="text-base font-medium text-[#1C1C1C] tracking-[-0.32px] leading-6">
                         Explore Our Services
@@ -276,36 +327,36 @@ export default function Home() {
       </section>
 
       {/* Vision Section */}
-      <section className="relative w-full bg-white py-[61px] px-10">
+      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[61px] px-5 sm:px-6 md:px-8 lg:px-10">
         {/* Label */}
-        <div className="flex items-center gap-[17px] mb-[30px]">
-          <div className="w-3 h-3 bg-[#00B1F1]" />
-          <span className="font-geist-mono text-lg leading-[21px] tracking-[-0.28px] uppercase text-[#1C1C1C]">
+        <div className="flex items-center gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
+          <span className="font-geist-mono text-sm sm:text-base md:text-lg leading-[21px] tracking-[-0.28px] uppercase text-[#1C1C1C]">
             OUR vision
           </span>
         </div>
 
-        <h2 className="font-ptserif max-w-[976px] ml-[378px] text-[60px] leading-[72px] tracking-[-2.2px] text-[#121212] font-normal mb-[60px]">
+        <h2 className="font-ptserif max-w-full lg:max-w-[976px] lg:ml-[378px] text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-[#121212] font-normal mb-10 sm:mb-12 lg:mb-[60px]">
           Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
         </h2>
 
-        {/* Vision Cards Grid */}
-        <div className="flex gap-5 max-w-[1440px] mx-auto">
+        {/* Vision Cards — vertical stack on mobile, 4-col on desktop */}
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 lg:gap-5 max-w-[1440px] mx-auto">
           {visionCards.map((card, index) => (
             <div
               key={index}
-              className={`w-[325px] h-[450px] rounded-md p-8 flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] cursor-default ${card.bg}`}
+              className={`w-full lg:w-[325px] lg:h-[450px] rounded-md p-6 sm:p-7 lg:p-8 flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] cursor-default ${card.bg}`}
             >
               <div>
-                <h3 className={`text-[32px] leading-[42px] tracking-[-1.28px] font-medium mb-6 ${card.textColor}`}>
+                <h3 className={`text-2xl sm:text-[28px] lg:text-[32px] leading-[1.2] sm:leading-[1.15] lg:leading-[42px] tracking-[-0.8px] sm:tracking-[-1px] lg:tracking-[-1.28px] font-medium mb-4 sm:mb-5 lg:mb-6 ${card.textColor}`}>
                   {card.title}
                 </h3>
-                <p className={`text-base leading-6 tracking-[-0.32px] font-medium ${card.textColor}`}>
+                <p className={`text-sm sm:text-base leading-6 tracking-[-0.2px] sm:tracking-[-0.32px] font-medium ${card.textColor}`}>
                   {card.description}
                 </p>
               </div>
-              {/* Static icon placeholder */}
-              <div className="w-[150px] h-[150px] opacity-30">
+              {/* Decorative circles — hidden on mobile */}
+              <div className="hidden lg:block w-[150px] h-[150px] opacity-30">
                 <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="75" cy="75" r="70" stroke="currentColor" strokeWidth="1" className={card.textColor} />
                   <circle cx="75" cy="75" r="50" stroke="currentColor" strokeWidth="1" className={card.textColor} />
@@ -318,28 +369,26 @@ export default function Home() {
       </section>
 
       {/* How We Work Section */}
-      <section className="relative w-full bg-[#00151C] py-[50px] px-10" ref={timelineRef}>
-        <div className="flex gap-[124px] max-w-[1440px] mx-auto">
+      <section className="relative w-full bg-[#00151C] py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10" ref={timelineRef}>
+        <div className="flex flex-col lg:flex-row lg:gap-[60px] xl:gap-[124px] max-w-[1440px] mx-auto">
           {/* Left - Fixed Content */}
-          <div className="w-[666px] shrink-0 sticky top-[100px] self-start">
-            <div className="flex items-center gap-[17px] mb-[30px]">
-              <div className="w-3 h-3 bg-[#00B1F1]" />
-              <span className="font-geist-mono text-lg leading-[21px] tracking-[-0.28px] uppercase text-white">
+          <div className="w-full lg:w-[500px] xl:w-[666px] lg:shrink-0 lg:sticky lg:top-[100px] lg:self-start mb-10 sm:mb-12 lg:mb-0">
+            <div className="flex items-center gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
+              <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
+              <span className="font-geist-mono text-sm sm:text-base md:text-lg leading-[21px] tracking-[-0.28px] uppercase text-white">
                 how we work?
               </span>
             </div>
-            <h2 className="font-ptserif text-[60px] leading-[72px] tracking-[-2.2px] text-white font-normal">
+            <h2 className="font-ptserif text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal">
               Precision manufacturing built for every depth, every project, every time.
             </h2>
           </div>
 
-          {/* Right - Scrollable Timeline */}
-          <div className="w-[578px] relative">
+          {/* Right - Timeline */}
+          <div className="w-full lg:w-[500px] xl:w-[578px] relative">
             {/* Timeline Line */}
-            <div className="absolute left-[30px] top-0 w-[2px] h-full">
-              {/* Dashed background */}
+            <div className="absolute left-[15px] sm:left-[20px] lg:left-[30px] top-0 w-[2px] h-full">
               <div className="absolute inset-0 border-l border-dashed border-[#4A4F59]" />
-              {/* Blue progress fill */}
               <div
                 className="absolute top-0 left-0 w-full bg-[#00B1F1] transition-all duration-100"
                 style={{ height: `${scrollProgress * 100}%` }}
@@ -347,18 +396,23 @@ export default function Home() {
             </div>
 
             {/* Timeline Items */}
-            <div className="relative pb-[100px]">
+            <div className="relative pb-12 sm:pb-16 lg:pb-[100px]">
               {timelinePhases.map((phase) => (
-                <div key={phase.number} className="relative pl-[100px] mb-[200px] last:mb-0">
-                  {/* Number Circle */}
-                  <div className="absolute left-0 top-0 w-[60px] h-[60px] rounded-full bg-[#1C1C1C] border border-[#4A4F59] flex items-center justify-center">
-                    <span className="text-lg leading-[27px] tracking-[-0.36px] text-white">
-                      {phase.number}
-                    </span>
+                <div key={phase.number} className="relative pl-10 sm:pl-[70px] lg:pl-[100px] mb-12 sm:mb-16 lg:mb-[200px] last:mb-0">
+                  {/* Number Circle + Title inline on mobile */}
+                  <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-[60px] lg:h-[60px] rounded-full bg-[#1C1C1C] border border-[#4A4F59] flex items-center justify-center shrink-0">
+                      <span className="text-xs sm:text-sm md:text-base lg:text-lg leading-[27px] tracking-[-0.36px] text-white">
+                        {phase.number}
+                      </span>
+                    </div>
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[42px] tracking-[-0.8px] sm:tracking-[-1px] lg:tracking-[-1.28px] text-white font-medium">
+                      {phase.title}
+                    </h3>
                   </div>
 
                   {/* Image */}
-                  <div className="w-[478px] h-[268px] rounded-md overflow-hidden mb-4">
+                  <div className="w-full aspect-[478/268] rounded-md overflow-hidden mb-3 sm:mb-4">
                     <img
                       src={phase.image}
                       alt={phase.title}
@@ -366,11 +420,8 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Title & Description */}
-                  <h3 className="text-[40px] leading-[42px] tracking-[-1.28px] text-white font-medium mb-3">
-                    {phase.title}
-                  </h3>
-                  <p className="text-xl leading-7 tracking-[-0.32px] text-[#BDBDC2] max-w-[478px]">
+                  {/* Description */}
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-6 sm:leading-7 md:leading-[28px] lg:leading-7 tracking-[-0.2px] sm:tracking-[-0.32px] text-[#BDBDC2] max-w-full lg:max-w-[478px]">
                     {phase.description}
                   </p>
                 </div>
@@ -381,25 +432,25 @@ export default function Home() {
       </section>
 
       {/* Products Preview Section */}
-      <section className="relative w-full bg-white py-[50px] px-10">
+      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10">
         {/* Label */}
-        <div className="flex items-center gap-[17px] mb-[30px]">
-          <div className="w-3 h-3 bg-[#00B1F1]" />
-          <span className="font-geist-mono text-lg leading-[21px] tracking-[-0.28px] uppercase text-[#1C1C1C]">
-            how we work?
+        <div className="flex items-center gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
+          <span className="font-geist-mono text-sm sm:text-base md:text-lg leading-[21px] tracking-[-0.28px] uppercase text-[#1C1C1C]">
+            OUR PRODUCTS
           </span>
         </div>
 
-        <h2 className="font-ptserif max-w-[1310px] text-[60px] leading-[72px] tracking-[-2.2px] text-[#1C1C1C] font-normal mb-[53px]">
+        <h2 className="font-ptserif max-w-full lg:max-w-[1310px] text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-[#1C1C1C] font-normal mb-10 sm:mb-12 lg:mb-[53px]">
           Every piece of equipment your dive operation needs - manufactured, certified, and delivered by Synergy.
         </h2>
 
-        {/* Product Cards */}
-        <div className="flex gap-10 max-w-[1440px] mx-auto">
+        {/* Product Cards — vertical stack on mobile, 3-col on desktop */}
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-10 max-w-[1440px] mx-auto">
           {productCards.map((card, index) => (
             <div
               key={index}
-              className="relative w-[453px] h-[549px] rounded-md overflow-hidden group cursor-default transition-transform duration-300 hover:scale-[1.02]"
+              className="relative w-full lg:w-[400px] xl:w-[453px] h-[320px] sm:h-[380px] md:h-[450px] lg:h-[500px] xl:h-[549px] rounded-md overflow-hidden group cursor-default transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98]"
             >
               {/* Background Image */}
               <img
@@ -412,10 +463,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20 opacity-50" />
 
               {/* Indicator Dot */}
-              <div className="absolute top-2 right-4 w-2.5 h-2.5 bg-white rounded-full" />
+              <div className="absolute top-3 right-4 w-2 h-2 sm:w-2.5 sm:h-2.5 bg-white rounded-full" />
 
               {/* Title */}
-              <h3 className="absolute bottom-8 left-8 text-[32px] leading-[42px] tracking-[-1.28px] font-medium text-white max-w-[393px]">
+              <h3 className="absolute bottom-6 left-6 sm:bottom-8 sm:left-8 text-xl sm:text-2xl md:text-[28px] lg:text-[32px] leading-[1.2] sm:leading-[1.15] lg:leading-[42px] tracking-[-0.8px] sm:tracking-[-1px] lg:tracking-[-1.28px] font-medium text-white max-w-[260px] sm:max-w-[320px] lg:max-w-[393px]">
                 {card.title}
               </h3>
             </div>
