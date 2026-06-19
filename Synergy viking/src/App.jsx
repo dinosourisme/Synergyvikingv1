@@ -6,6 +6,7 @@ import Services from './pages/Services/Services';
 import AboutUsPage from "./pages/aboutus/main.jsx";
 import Products from "./pages/products/Products.jsx";
 import ProductDetail from "./pages/productDetail/ProductDetails.jsx"
+import Home from './pages/homepage/HomePage.jsx'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<div className="p-10 text-white">Home Page</div>} />
+        <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />        
         <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<ProductDetail />} />
