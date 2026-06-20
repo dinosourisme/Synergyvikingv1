@@ -10,17 +10,17 @@ export const productsData = [
         ],
         tag: 'LARS',
     },
-    // {
-    //     id: 'catex-twin-bucket-lars',
-    //     title: 'ATEX Compliant Twin Bucket LARS - 2 Divers',
-    //     images: [
-    //         '/src/assets/products/ATEX Twin Basket LARS.svg',
-    //         '/src/assets/products/ATEX Twin Basket LARS.svg',
-    //         '/src/assets/products/ATEX Twin Basket LARS.svg',
-    //         '/src/assets/products/ATEX Twin Basket LARS.svg',
-    //     ],
-    //     tag: 'LARS',
-    // },
+    {
+        id: 'atex-twin-bucket-lars',
+        title: 'ATEX Compliant Twin Bucket LARS - 2 Divers',
+        images: [
+            '/src/assets/products/ATEX Twin Basket LARS.svg',
+            '/src/assets/products/ATEX Twin Basket LARS.svg',
+            '/src/assets/products/ATEX Twin Basket LARS.svg',
+            '/src/assets/products/ATEX Twin Basket LARS.svg',
+        ],
+        tag: 'LARS',
+    },
     // {
     //   id: 'atex-twin-basket-lars-2',
     //   title: 'ATEX Compliant Twin Basket LARS - 2 Divers',
@@ -39,15 +39,15 @@ export const productsData = [
     //   ],
     //   tag: 'Market Trends',
     // },
-    // {
-    //   id: 'brush-kart',
-    //   title: 'Brush Kart',
-    //   images: [
-    //     '/src/assets/products/Brush Kart pp.png',
-    //     '/src/assets/products/IMG_6698.jpg',
-    //   ],
-    //   tag: 'BRUSH KART',
-    // },
+    {
+      id: 'brush-kart',
+      title: 'Brush Kart',
+      images: [
+        '/src/assets/products/bush kart.svg',
+        
+      ],
+      tag: 'BRUSH KART',
+    },
     // {
     //   id: 'diesel-engine-power-pack',
     //   title: 'Diesel Engine Power Pack',

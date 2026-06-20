@@ -27,28 +27,28 @@ export const productDetails = {
       ],
       colors: ['#E49804', '#2C7ABE', '#091D26'],
     },
-    'compact-lars': {
-      title: 'Compact LARS',
-      description:
-        'Compact and efficient Launch and Recovery System designed for smaller vessels and operations. Features a streamlined design without compromising on safety or functionality.',
-      specs: `Product Code: SY--CPLARS-XX-XXX
-  • Compact design for limited deck space
-  • Single diver capability
-  • Manual and hydraulic operation options
-  • DNV certified lifting arrangement
-  • Stainless steel construction
-  • Integrated control panel
-  • Emergency recovery system
-  • IMCA DO37 compliant`,
-      images: [
-        '/src/assets/products/IMG_9830.png',
-        '/src/assets/products/IMG_6698.jpg',
-        '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
-        '/src/assets/products/Brush Kart pp.png',
-      ],
-      colors: ['#2C7ABE', '#091D26'],
-    },
-    'atex-twin-basket-lars-2': {
+  //   'compact-lars': {
+  //     title: 'Compact LARS',
+  //     description:
+  //       'Compact and efficient Launch and Recovery System designed for smaller vessels and operations. Features a streamlined design without compromising on safety or functionality.',
+  //     specs: `Product Code: SY--CPLARS-XX-XXX
+  // • Compact design for limited deck space
+  // • Single diver capability
+  // • Manual and hydraulic operation options
+  // • DNV certified lifting arrangement
+  // • Stainless steel construction
+  // • Integrated control panel
+  // • Emergency recovery system
+  // • IMCA DO37 compliant`,
+  //     images: [
+  //       '/src/assets/products/IMG_9830.png',
+  //       '/src/assets/products/IMG_6698.jpg',
+  //       '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
+  //       '/src/assets/products/Brush Kart pp.png',
+  //     ],
+  //     colors: ['#2C7ABE', '#091D26'],
+  //   },
+    'atex-twin-bucket-lars': {
       title: 'ATEX Compliant Twin Basket LARS - 2 Divers',
       description:
         'Synergy designed 10ft containerized dive control cabin with hp cylinder rack and three diver mix gas panel are one of our best sellers. The insulated air conditioned container is perfect for offshore marine job where space is the issue.',
@@ -63,34 +63,34 @@ export const productDetails = {
   • Comms system with recording capability
   • IMCA DO37 & DO18 compliant`,
       images: [
-        '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
-        '/src/assets/products/IMG_6698.jpg',
-        '/src/assets/products/IMG_9830.png',
-        '/src/assets/products/Brush Kart pp.png',
+        '/src/assets/products/ATEX Twin Basket LARS.svg',
+        '/src/assets/products/ATEX Twin Basket LARS.svg',
+        '/src/assets/products/ATEX Twin Basket LARS.svg',
+        '/src/assets/products/ATEX Twin Basket LARS.svg',
       ],
       colors: ['#E49804', '#2C7ABE', '#091D26'],
     },
-    'atex-twin-basket-lars-3': {
-      title: 'ATEX Compliant Twin Basket LARS - 3 Divers',
-      description:
-        'Advanced three-diver Launch and Recovery System with enhanced capacity and safety features for complex offshore operations.',
-      specs: `Product Code: SY--TB3LARS-XX-XXX
-  • Triple basket configuration
-  • ATEX Zone 1 & 2 compliance
-  • Three diver simultaneous operation
-  • Redundant winch and control systems
-  • Real-time monitoring and data logging
-  • Full IMCA DO37 & DO18 compliance
-  • Bureau Veritas or DNV certification
-  • Integrated hyperbaric rescue capability`,
-      images: [
-        '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
-        '/src/assets/products/IMG_9830.png',
-        '/src/assets/products/IMG_6698.jpg',
-        '/src/assets/products/Brush Kart pp.png',
-      ],
-      colors: ['#E49804', '#2C7ABE'],
-    },
+  //   'atex-twin-basket-lars-3': {
+  //     title: 'ATEX Compliant Twin Basket LARS - 3 Divers',
+  //     description:
+  //       'Advanced three-diver Launch and Recovery System with enhanced capacity and safety features for complex offshore operations.',
+  //     specs: `Product Code: SY--TB3LARS-XX-XXX
+  // • Triple basket configuration
+  // • ATEX Zone 1 & 2 compliance
+  // • Three diver simultaneous operation
+  // • Redundant winch and control systems
+  // • Real-time monitoring and data logging
+  // • Full IMCA DO37 & DO18 compliance
+  // • Bureau Veritas or DNV certification
+  // • Integrated hyperbaric rescue capability`,
+  //     images: [
+  //       '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
+  //       '/src/assets/products/IMG_9830.png',
+  //       '/src/assets/products/IMG_6698.jpg',
+  //       '/src/assets/products/Brush Kart pp.png',
+  //     ],
+  //     colors: ['#E49804', '#2C7ABE'],
+  //   },
     'brush-kart': {
       title: 'Brush Kart',
       description:
@@ -105,33 +105,30 @@ export const productDetails = {
   • Lightweight aluminum construction
   • Quick deployment system`,
       images: [
-        '/src/assets/products/Brush Kart pp.png',
-        '/src/assets/products/IMG_6698.jpg',
-        '/src/assets/products/IMG_9830.png',
-        '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
+        '/src/assets/products/bush kart.svg',
       ],
       colors: ['#091D26', '#2C7ABE'],
     },
-    'diesel-engine-power-pack': {
-      title: 'Diesel Engine Power Pack',
-      description:
-        'Reliable and robust diesel power solution for offshore diving operations. Designed for continuous operation in harsh marine environments.',
-      specs: `Product Code: SY--DEPP-XX-XXX
-  • Diesel engine power generation
-  • 50kVA to 500kVA capacity range
-  • Sound attenuated enclosure
-  • Fuel efficient operation
-  • Automatic load sharing
-  • Remote monitoring capability
-  • DNV or Bureau Veritas certified
-  • Emergency shutdown systems
-  • 24/7 operation capability`,
-      images: [
-        '/src/assets/products/IMG_9830.png',
-        '/src/assets/products/Brush Kart pp.png',
-        '/src/assets/products/IMG_6698.jpg',
-        '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
-      ],
-      colors: ['#E49804', '#091D26'],
-    },
+  //   'diesel-engine-power-pack': {
+  //     title: 'Diesel Engine Power Pack',
+  //     description:
+  //       'Reliable and robust diesel power solution for offshore diving operations. Designed for continuous operation in harsh marine environments.',
+  //     specs: `Product Code: SY--DEPP-XX-XXX
+  // • Diesel engine power generation
+  // • 50kVA to 500kVA capacity range
+  // • Sound attenuated enclosure
+  // • Fuel efficient operation
+  // • Automatic load sharing
+  // • Remote monitoring capability
+  // • DNV or Bureau Veritas certified
+  // • Emergency shutdown systems
+  // • 24/7 operation capability`,
+  //     images: [
+  //       '/src/assets/products/IMG_9830.png',
+  //       '/src/assets/products/Brush Kart pp.png',
+  //       '/src/assets/products/IMG_6698.jpg',
+  //       '/src/assets/products/WhatsApp Image 2026-03-27 at 2.53.41 PM.jpg',
+  //     ],
+  //     colors: ['#E49804', '#091D26'],
+  //   },
   };
