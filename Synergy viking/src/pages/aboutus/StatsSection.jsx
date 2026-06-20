@@ -48,10 +48,10 @@ function AnimatedCounter({ value, suffix }) {
 
   return (
     <span ref={ref} className="inline-flex items-baseline gap-1">
-      <motion.span className="font-sans font-extrabold text-brand-lime text-[40px] sm:text-[48px] md:text-[56px] lg:text-[72px] leading-[1] tracking-[-1px]">
+      <motion.span className="font-sans  text-brand-lime text-[40px] sm:text-[48px] md:text-[56px] lg:text-[72px] leading-[1] tracking-[-1px]">
         {display}
       </motion.span>
-      <span className="font-sans font-extrabold text-brand-lime text-[40px] sm:text-[48px] md:text-[56px] lg:text-[72px] leading-[1] tracking-[-1px]">
+      <span className="font-sans  text-brand-lime text-[40px] sm:text-[48px] md:text-[56px] lg:text-[72px] leading-[1] tracking-[-1px]">
         {suffix}
       </span>
     </span>
