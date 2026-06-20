@@ -11,6 +11,7 @@ import productImg1 from '../../assets/home/timeline_1.svg';
 import productImg2 from '../../assets/home/timeline_1.svg';
 import productImg3 from '../../assets/home/timeline_1.svg';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const stats = [
   { number: '08+', description: 'Products across our range, covering everything from hyperbaric chambers and dive stations to personal diver gear and underwater tools.' },
@@ -209,6 +210,13 @@ export default function Home() {
               <div className="flex flex-col gap-6 sm:gap-7">
                 {stats.map((stat, index) => (
                   <div key={index}>
+                    <motion.div
+                    key={index}
+                    initial={{ y: 25, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    viewport={{ once: false, amount: 0.1 }}
+                    transition={{ duration: 0.4, ease: 'easeOut', delay: index * 0.08 }}
+                  >
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 md:gap-8 lg:gap-[60px]">
                       <span className="font-ptserif text-3xl sm:text-4xl md:text-[48px] leading-[1.2] sm:leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.4px] text-[#121212] font-normal shrink-0">
                         {stat.number}
@@ -220,7 +228,9 @@ export default function Home() {
                     {index < stats.length - 1 && (
                       <div className="w-full h-px bg-[#C6C7CC] mt-6 sm:mt-7" />
                     )}
+                    </motion.div>
                   </div>
+                  
                 ))}
               </div>
 
