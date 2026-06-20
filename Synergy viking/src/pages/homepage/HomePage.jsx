@@ -435,14 +435,14 @@ export default function Home() {
       {/* Products Preview Section */}
       <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10">
         {/* Label */}
-        <div className="flex items-center gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
+        <div className="flex items-center lg:ml-[33px] xl:ml-[33px] gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
           <span className="font-geist-mono text-sm sm:text-base md:text-lg leading-[21px] tracking-[-0.28px] uppercase text-[#1C1C1C]">
-            OUR PRODUCTS
+            How we work?
           </span>
         </div>
 
-        <h2 className="font-ptserif max-w-full lg:max-w-[1310px] text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-[#1C1C1C] font-normal mb-10 sm:mb-12 lg:mb-[53px]">
+        <h2 className="font-ptserif max-w-full lg:ml-[31px] xl:ml-[31px] lg:max-w-[1310px] text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-[#1C1C1C] font-normal mb-10 sm:mb-12 lg:mb-[53px]">
           Every piece of equipment your dive operation needs - manufactured, certified, and delivered by Synergy.
         </h2>
 
