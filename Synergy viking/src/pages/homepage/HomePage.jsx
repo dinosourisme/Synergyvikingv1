@@ -139,7 +139,7 @@ export default function Home() {
 
         {/* Main content area */}
         <div className="relative flex-1 flex flex-col justify-center px-5 sm:px-6 md:px-8 lg:px-10 py-6 sm:py-8 md:py-12 lg:py-16">
-          <div className="max-w-[2000px] mx-auto w-full relative lg:-translate-y-40">
+          <div className="max-w-[2000px] mx-auto w-full relative lg:-translate-y-40 -mt-8 ">
             {/* Sidebar label — horizontal on mobile, left sidebar on lg+ */}
             <div className="mb-3 sm:mb-4 lg:mb-0 lg:absolute lg:left-0 lg:top-0">
               <p className="text-white uppercase font-geist-mono font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-[18px] sm:leading-[20px] md:leading-[24px] lg:leading-[26px] tracking-wide">
@@ -154,7 +154,7 @@ export default function Home() {
             </div>
 
             {/* Hero copy */}
-            <div className="lg:ml-[300px] xl:ml-[340px] lg:max-w-[688px]">
+            <div className="lg:ml-[300px] xl:ml-[340px] xl:mb-[250px] mb-60 lg:max-w-[688px] xl:-mt-[20px]">
               <div className="flex flex-col gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8 lg:mb-10">
                 <h1 className="text-white font-ptserif font-normal text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[60px] leading-[1.15] sm:leading-[1.15] md:leading-[1.1] lg:leading-[84px] tracking-[-1px] sm:tracking-[-1.4px] md:tracking-[-1.8px] xl:tracking-[-2.2px]">
                   Synergy Viking
