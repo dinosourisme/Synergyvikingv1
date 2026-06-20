@@ -144,12 +144,12 @@ export default function Home() {
             <div className="mb-3 sm:mb-4 lg:mb-0 lg:absolute lg:left-0 lg:top-0">
               <p className="text-white uppercase font-geist-mono font-medium text-xs sm:text-sm md:text-base lg:text-lg leading-[18px] sm:leading-[20px] md:leading-[24px] lg:leading-[26px] tracking-wide">
                 COMMERCIAL
-                <span className="mx-2 lg:hidden">·</span>
+                <span className="mx-2 lg:hidden">|</span>
                 <br className="hidden lg:block" />
                 DIVING
-                <span className="mx-2 lg:hidden">·</span>
-                <br className="hidden lg:block" />
-                EQUIPMENT
+                <span className="mx-2 lg:hidden">|</span>
+                <span className="lg:ml-2">EQUIPMENT</span>
+                
               </p>
             </div>
 
