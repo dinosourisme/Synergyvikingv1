@@ -15,7 +15,7 @@ function HeroSection() {
   return (
     <section className="bg-white">
       {/* Dark intro block */}
-      <section className="relative w-full bg-[#00151C] h-[470px] pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-[7px] lg:pb-[120px] lg:px-10">
+      <section className="relative w-full bg-[#00151C]  pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-[7px] lg:pb-[120px] lg:px-10">
         {/* Label */}
         <div className="flex items-center gap-3 md:gap-[17px] mb-6 md:mb-8">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
@@ -25,7 +25,7 @@ function HeroSection() {
         </div>
 
         {/* Heading */}
-        <h2 className="max-w-full lg:max-w-[1051px] lg:ml-[205px] text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] leading-tight md:leading-[1.2] lg:leading-[72px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal font-ptserif">
+        <h2 className="max-w-full lg:-mt-[50px] xl:-mt-[50px] lg:max-w-[1051px] lg:ml-[205px] text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] leading-tight md:leading-[1.2] lg:leading-[72px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal font-ptserif">
         We are redefining how goods move with the right technology and a commitment to dependable transportation
         </h2>
       </section>
