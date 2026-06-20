@@ -371,7 +371,7 @@ export default function Home() {
 
       {/* How We Work Section */}
       <section className="relative w-full bg-[#00151C] py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10" ref={timelineRef}>
-        <div className="flex flex-col lg:flex-row lg:gap-[60px] xl:gap-[124px] max-w-[1440px] mx-auto">
+        <div className="flex flex-col lg:flex-row lg:ml-[10px] lg:gap-[60px] xl:gap-[124px] max-w-[1440px] mx-auto">
           {/* Left - Fixed Content */}
           <div className="w-full lg:w-[500px] xl:w-[666px] lg:shrink-0 lg:sticky lg:top-[100px] lg:self-start mb-10 sm:mb-12 lg:mb-0">
             <div className="flex items-center gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
@@ -433,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* Products Preview Section */}
-      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10">
+      <section className="relative w-full bg-white lg:-ml-[27px] xl:-ml-[27px] py-16 sm:py-20 md:py-24 lg:py-[50px] px-5 sm:px-6 md:px-8 lg:px-10">
         {/* Label */}
         <div className="flex items-center lg:ml-[33px] xl:ml-[33px] gap-3 md:gap-[17px] mb-6 sm:mb-8 lg:mb-[30px]">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
