@@ -337,7 +337,7 @@ export default function Home() {
           </span>
         </div>
 
-        <h2 className="font-ptserif max-w-full lg:max-w-[976px] lg:ml-[378px] text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-[#121212] font-normal mb-10 sm:mb-12 lg:mb-[60px]">
+        <h2 className="font-ptserif max-w-full lg:max-w-[976px] lg:-mt-[60px] lg:ml-[378px] text-[24px] sm:text-[28px] md:text-4xl lg:text-5xl xl:text-[60px] leading-[1.3] sm:leading-[1.25] md:leading-[1.15] lg:leading-[72px] tracking-[-0.8px] sm:tracking-[-1px] md:tracking-[-2px] xl:tracking-[-2.2px] text-[#121212] font-normal mb-10 sm:mb-12 lg:mb-[60px]">
           Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
         </h2>
 
