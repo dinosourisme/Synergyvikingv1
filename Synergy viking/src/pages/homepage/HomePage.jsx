@@ -10,6 +10,12 @@ import timelineImg4 from '../../assets/home/timeline_1.svg';
 import productImg1 from '../../assets/home/timeline_1.svg';
 import productImg2 from '../../assets/home/timeline_1.svg';
 import productImg3 from '../../assets/home/timeline_1.svg';
+
+import icon1 from '../../assets/home/arrowbox.svg';
+import icon2 from '../../assets/home/circle.svg';
+import icon3 from '../../assets/home/circlesbox.svg';
+import icon4 from '../../assets/home/Container.svg';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -32,30 +38,34 @@ const servicesPreview = [
   },
 ];
 
-const visionCards = [
+const CARDS = [
   {
-    title: 'Precision Engineering',
-    description: 'We design and build every piece of equipment to meet the highest standards of safety and performance, ensuring reliability in the most demanding underwater environments.',
-    bg: 'bg-[#00B1F1]',
-    textColor: 'text-white',
+    bg: '#00B1F1',
+    textColor: '#FFFFFF',
+    title: 'Precision\nEngineering',
+    body: 'Built to the deepest standard. Every system we manufacture is designed with zero tolerance for failure – engineered to IMCA, ADCI, and ISO specifications, where diver safety is never a compromise.',
+    icon: icon1,
   },
   {
-    title: 'End-to-End Ownership',
-    description: 'Gain absolute peace of mind with 24/7 real-time tracking and comprehensive equipment lifecycle management.',
-    bg: 'bg-[#F0F0EB]',
-    textColor: 'text-[#1C1C1C]',
+    bg: '#F0F0EB',
+    textColor: '#1C1C1C',
+    title: 'End-to-End\nOwnership',
+    body: 'From design brief to operational deployment, we take full responsibility for every stage: fabrication, testing, certification, delivery, and lifetime support, all under one roof.',
+    icon: icon2,
   },
   {
-    title: 'Global Standards',
-    description: 'Our flexible infrastructure grows with your business, ensuring compliance with international diving safety standards.',
-    bg: 'bg-[#1C1C1C]',
-    textColor: 'text-white',
+    bg: '#1C1C1C',
+    textColor: '#FFFFFF',
+    title: 'Global\nStandards',
+    body: 'Synergy holds ISO 9001, ISO 14001 and ISO 45001 certifications, meaning our quality, environmental, and safety management systems meet the highest international benchmarks, every time.',
+    icon: icon3,
   },
   {
-    title: 'Always Available',
-    description: 'Leveraging advanced data to anticipate needs and deliver proactive support for uninterrupted operations.',
-    bg: 'bg-[#F0F0EB]',
-    textColor: 'text-[#1C1C1C]',
+    bg: '#F0F0EB',
+    textColor: '#1C1C1C',
+    title: 'Always\nAvailable',
+    body: 'We maintain an extensive inventory of diving equipment and spares to support our clients\u2019 operations 24/7, 365 days a year \u2014 because downtime underwater is never an option.',
+    icon: icon4,
   },
 ];
 
@@ -353,29 +363,69 @@ export default function Home() {
 
         {/* Vision Cards — vertical stack on mobile, 4-col on desktop */}
         <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 lg:gap-5 max-w-[1440px] mx-auto">
-          {visionCards.map((card, index) => (
+        <div
+          className="flex flex-row"
+          style={{ gap: '13px', width: '1360px' }}
+        >
+          {CARDS.map((card) => (
             <div
-              key={index}
-              className={`w-full lg:w-[325px] lg:h-[450px] rounded-md p-6 sm:p-7 lg:p-8 flex flex-col justify-between transition-transform duration-300 hover:scale-[1.02] cursor-default ${card.bg}`}
+              key={card.title}
+              style={{
+                width: '325px',
+                height: '450px',
+                background: card.bg,
+                borderRadius: '6px',
+                padding: '32px',
+                flexShrink: 0,
+                display: 'flex',
+                flexDirection: 'column',
+                position: 'relative',
+                overflow: 'hidden',
+              }}
             >
-              <div>
-                <h3 className={`text-2xl sm:text-[28px] lg:text-[32px] leading-[1.2] sm:leading-[1.15] lg:leading-[42px] tracking-[-0.8px] sm:tracking-[-1px] lg:tracking-[-1.28px] font-medium mb-4 sm:mb-5 lg:mb-6 ${card.textColor}`}>
-                  {card.title}
-                </h3>
-                <p className={`text-sm sm:text-base leading-6 tracking-[-0.2px] sm:tracking-[-0.32px] font-medium ${card.textColor}`}>
-                  {card.description}
-                </p>
-              </div>
-              {/* Decorative circles — hidden on mobile */}
-              <div className="hidden lg:block w-[150px] h-[150px] opacity-30">
-                <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="75" cy="75" r="70" stroke="currentColor" strokeWidth="1" className={card.textColor} />
-                  <circle cx="75" cy="75" r="50" stroke="currentColor" strokeWidth="1" className={card.textColor} />
-                  <circle cx="75" cy="75" r="30" stroke="currentColor" strokeWidth="1" className={card.textColor} />
-                </svg>
+              {/* Card title */}
+              <h3
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '32px',
+                  lineHeight: '42px',
+                  letterSpacing: '-1.28px',
+                  color: card.textColor,
+                  whiteSpace: 'pre-line',
+                  marginBottom: '16px',
+                  marginTop: 0,
+                }}
+              >
+                {card.title}
+              </h3>
+
+              {/* Card body */}
+              <p
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '16px',
+                  lineHeight: '24px',
+                  letterSpacing: '-0.32px',
+                  color: card.textColor,
+                  margin: 0,
+                }}
+              >
+                {card.body}
+              </p>
+
+              {/* ── Icon ── */}
+              <div style={{ position: 'absolute', bottom: '32px', left: '32px' }}>
+                <img 
+                  src={card.icon} 
+                  alt={card.title} 
+                  style={{ width: '80px', height: '80px', objectFit: 'contain' }}
+                />
               </div>
             </div>
           ))}
+        </div>
         </div>
       </section>
 
