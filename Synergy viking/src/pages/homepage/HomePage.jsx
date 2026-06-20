@@ -149,7 +149,7 @@ export default function Home() {
                 DIVING
                 <span className="mx-2 lg:hidden">|</span>
                 <span className="lg:ml-2">EQUIPMENT</span>
-                
+
               </p>
             </div>
 
@@ -198,7 +198,8 @@ export default function Home() {
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col gap-8 sm:gap-10 lg:gap-[60px] w-full lg:w-1/2 xl:w-[632px]">
+          <div className="flex flex-col gap-8 sm:gap-10 lg:mt-[30px] lg:gap-[60px] w-full lg:w-1/2 xl:w-[632px]">
+
             <h2 className="font-ptserif text-xl sm:text-2xl md:text-[26px] lg:text-[30px] leading-[1.4] sm:leading-[1.35] md:leading-[40px] tracking-[-0.3px] md:tracking-[-0.4px] text-[#121212] font-normal">
               Experience a complete, uncompromising approach to commercial diving equipment ; from first design brief to final delivery, backed by a team that stays with you long after the job is done.
             </h2>
