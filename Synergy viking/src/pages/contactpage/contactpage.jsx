@@ -142,7 +142,7 @@ function ContactPage() {
                 
                 <div>
                   <p className="text-sm text-gray-500 uppercase mb-1">PHONE</p>
-                  <p className="text-xl md:text-2xl text-gray-900">+91 8329601548</p>
+                  <p className="text-xl md:text-2xl text-gray-900">+91 83296 01548</p>
                 </div>
                 
                 <div>
