@@ -1,12 +1,16 @@
+import atexSingleBucketLars from '../../../assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg';
+import atexTwinBasketLars from '../../../assets/products/ATEX Twin Basket LARS.svg';
+import brushKartImg from '../../../assets/products/bush kart.svg';
+
 export const productsData = [
     {
         id: 'atex-single-bucket-lars',
         title: 'ATEX Compliant Single Bucket LARS - 2 Divers',
         images: [
-            '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-            '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-            '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-            '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
+            atexSingleBucketLars,
+            atexSingleBucketLars,
+            atexSingleBucketLars,
+            atexSingleBucketLars,
         ],
         tag: 'LARS',
     },
@@ -14,10 +18,10 @@ export const productsData = [
         id: 'atex-twin-bucket-lars',
         title: 'ATEX Compliant Twin Bucket LARS - 2 Divers',
         images: [
-            '/src/assets/products/ATEX Twin Basket LARS.svg',
-            '/src/assets/products/ATEX Twin Basket LARS.svg',
-            '/src/assets/products/ATEX Twin Basket LARS.svg',
-            '/src/assets/products/ATEX Twin Basket LARS.svg',
+            atexTwinBasketLars,
+            atexTwinBasketLars,
+            atexTwinBasketLars,
+            atexTwinBasketLars,
         ],
         tag: 'LARS',
     },
@@ -40,13 +44,13 @@ export const productsData = [
     //   tag: 'Market Trends',
     // },
     {
-      id: 'brush-kart',
-      title: 'Brush Kart',
-      images: [
-        '/src/assets/products/bush kart.svg',
-        
-      ],
-      tag: 'BRUSH KART',
+        id: 'brush-kart',
+        title: 'Brush Kart',
+        images: [
+            brushKartImg,
+
+        ],
+        tag: 'BRUSH KART',
     },
     // {
     //   id: 'diesel-engine-power-pack',

@@ -1,9 +1,13 @@
+import atexSingleBucketLars from '../../../assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg';
+import atexTwinBasketLars from '../../../assets/products/ATEX Twin Basket LARS.svg';
+import brushKartImg from '../../../assets/products/bush kart.svg';
+
 export const productDetails = {
-    'atex-single-bucket-lars': {
-      title: 'ATEX Compliant Single Bucket LARS - 2 Divers',
-      description:
-        'Synergy designed 10ft containerized dive control cabin with hp cylinder rack and three diver mix gas panel are one of our best sellers. The insulated air conditioned container is perfect for offshore marine job where space is the issue. The gas quads are kept outside and connected to container. The supervisor has all the equipment that he needs at his command to ensure safe diving operations in relative comfort and unencumbered by weather.',
-      specs: `Product Code: SY--10FTDC-XX-XXX
+  'atex-single-bucket-lars': {
+    title: 'ATEX Compliant Single Bucket LARS - 2 Divers',
+    description:
+      'Synergy designed 10ft containerized dive control cabin with hp cylinder rack and three diver mix gas panel are one of our best sellers. The insulated air conditioned container is perfect for offshore marine job where space is the issue. The gas quads are kept outside and connected to container. The supervisor has all the equipment that he needs at his command to ensure safe diving operations in relative comfort and unencumbered by weather.',
+    specs: `Product Code: SY--10FTDC-XX-XXX
   • 10ft Container – DNV or ISO as per client requirement
   • Fully insulated and air conditioned
   • Three Diver Mix Gas Panel
@@ -17,16 +21,16 @@ export const productDetails = {
   • IMCA DO37 & DO18 compliant certification package
   • FMEA for complete system
   • Bureau Veritas class witness testing certification for entire system`,
-      images: [
-        '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-        '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-        '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-        '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-        '/src/assets/products/ATEX Compliant Single Bucket LARS-2 drivers.svg',
-        
-      ],
-      colors: ['#E49804', '#2C7ABE', '#091D26'],
-    },
+    images: [
+      atexSingleBucketLars,
+      atexSingleBucketLars,
+      atexSingleBucketLars,
+      atexSingleBucketLars,
+      atexSingleBucketLars,
+
+    ],
+    colors: ['#E49804', '#2C7ABE', '#091D26'],
+  },
   //   'compact-lars': {
   //     title: 'Compact LARS',
   //     description:
@@ -48,11 +52,11 @@ export const productDetails = {
   //     ],
   //     colors: ['#2C7ABE', '#091D26'],
   //   },
-    'atex-twin-bucket-lars': {
-      title: 'ATEX Compliant Twin Basket LARS - 2 Divers',
-      description:
-        'Synergy designed 10ft containerized dive control cabin with hp cylinder rack and three diver mix gas panel are one of our best sellers. The insulated air conditioned container is perfect for offshore marine job where space is the issue.',
-      specs: `Product Code: SY--TB2LARS-XX-XXX
+  'atex-twin-bucket-lars': {
+    title: 'ATEX Compliant Twin Basket LARS - 2 Divers',
+    description:
+      'Synergy designed 10ft containerized dive control cabin with hp cylinder rack and three diver mix gas panel are one of our best sellers. The insulated air conditioned container is perfect for offshore marine job where space is the issue.',
+    specs: `Product Code: SY--TB2LARS-XX-XXX
   • Twin basket configuration
   • ATEX compliant for hazardous zones
   • Two diver simultaneous operation
@@ -62,14 +66,14 @@ export const productDetails = {
   • Video monitoring for both divers
   • Comms system with recording capability
   • IMCA DO37 & DO18 compliant`,
-      images: [
-        '/src/assets/products/ATEX Twin Basket LARS.svg',
-        '/src/assets/products/ATEX Twin Basket LARS.svg',
-        '/src/assets/products/ATEX Twin Basket LARS.svg',
-        '/src/assets/products/ATEX Twin Basket LARS.svg',
-      ],
-      colors: ['#E49804', '#2C7ABE', '#091D26'],
-    },
+    images: [
+      atexTwinBasketLars,
+      atexTwinBasketLars,
+      atexTwinBasketLars,
+      atexTwinBasketLars,
+    ],
+    colors: ['#E49804', '#2C7ABE', '#091D26'],
+  },
   //   'atex-twin-basket-lars-3': {
   //     title: 'ATEX Compliant Twin Basket LARS - 3 Divers',
   //     description:
@@ -91,11 +95,11 @@ export const productDetails = {
   //     ],
   //     colors: ['#E49804', '#2C7ABE'],
   //   },
-    'brush-kart': {
-      title: 'Brush Kart',
-      description:
-        'Specialized cleaning and maintenance system for underwater structures. The Brush Kart provides efficient hull and surface cleaning capabilities.',
-      specs: `Product Code: SY--BK-XX-XXX
+  'brush-kart': {
+    title: 'Brush Kart',
+    description:
+      'Specialized cleaning and maintenance system for underwater structures. The Brush Kart provides efficient hull and surface cleaning capabilities.',
+    specs: `Product Code: SY--BK-XX-XXX
   • High-pressure water jet system
   • Adjustable brush configurations
   • ROV compatible mounting
@@ -104,11 +108,11 @@ export const productDetails = {
   • Real-time video feedback
   • Lightweight aluminum construction
   • Quick deployment system`,
-      images: [
-        '/src/assets/products/bush kart.svg',
-      ],
-      colors: ['#091D26', '#2C7ABE'],
-    },
+    images: [
+      brushKartImg,
+    ],
+    colors: ['#091D26', '#2C7ABE'],
+  },
   //   'diesel-engine-power-pack': {
   //     title: 'Diesel Engine Power Pack',
   //     description:
@@ -131,4 +135,4 @@ export const productDetails = {
   //     ],
   //     colors: ['#E49804', '#091D26'],
   //   },
-  };
+};

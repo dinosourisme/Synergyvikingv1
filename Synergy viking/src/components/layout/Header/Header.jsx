@@ -65,12 +65,12 @@ export default function Header() {
         {/* Desktop CTA Button */}
         <button
           type="button"
-          className="hidden lg:flex items-center h-10 px-5 py-2 bg-[#00B1F1] rounded-[100px] shadow-[0px_2px_2.667px_-0.667px_rgba(42,42,42,0.1),0px_0.667px_0.667px_rgba(42,42,42,0.08),inset_0px_2px_2px_rgba(255,255,255,0.1)] gap-3 group cursor-pointer"
+          className="hidden lg:flex items-center h-10 px-5 py-2 bg-[#00B1F1] rounded-[100px] shadow-[0px_2px_2.667px_-0.667px_rgba(42,42,42,0.1),0px_0.667px_0.667px_rgba(42,42,42,0.08),inset_0px_2px_2px_rgba(255,255,255,0.1)] gap-1.5 group cursor-pointer active:scale-95 transition-transform hover:scale-105"
         >
           <span className="text-base font-semibold text-white tracking-[-0.32px] leading-6">
             Get a Quote
           </span>
-          <span className="w-1.5 h-1.5 rounded-full bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+          <span className="h-1.5 bg-white rounded-full transition-all duration-300 w-0 opacity-0 group-hover:w-1.5 group-hover:opacity-100" />
         </button>
 
         {/* Mobile/Tablet Hamburger Button */}

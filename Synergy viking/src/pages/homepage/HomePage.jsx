@@ -45,6 +45,7 @@ const CARDS = [
     title: 'Precision\nEngineering',
     body: 'Built to the deepest standard. Every system we manufacture is designed with zero tolerance for failure – engineered to IMCA, ADCI, and ISO specifications, where diver safety is never a compromise.',
     icon: icon1,
+    iconScale: 1,
   },
   {
     bg: '#F0F0EB',
@@ -52,6 +53,8 @@ const CARDS = [
     title: 'End-to-End\nOwnership',
     body: 'From design brief to operational deployment, we take full responsibility for every stage: fabrication, testing, certification, delivery, and lifetime support, all under one roof.',
     icon: icon2,
+    iconScale: 1.1,
+
   },
   {
     bg: '#1C1C1C',
@@ -59,6 +62,8 @@ const CARDS = [
     title: 'Global\nStandards',
     body: 'Synergy holds ISO 9001, ISO 14001 and ISO 45001 certifications, meaning our quality, environmental, and safety management systems meet the highest international benchmarks, every time.',
     icon: icon3,
+    invertIcon: true,
+    iconScale: 1.4,
   },
   {
     bg: '#F0F0EB',
@@ -66,6 +71,8 @@ const CARDS = [
     title: 'Always\nAvailable',
     body: 'We maintain an extensive inventory of diving equipment and spares to support our clients\u2019 operations 24/7, 365 days a year \u2014 because downtime underwater is never an option.',
     icon: icon4,
+    iconScale: 1.1,
+
   },
 ];
 
@@ -221,26 +228,26 @@ export default function Home() {
                 {stats.map((stat, index) => (
                   <div key={index}>
                     <motion.div
-                    key={index}
-                    initial={{ y: 25, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    viewport={{ once: false, amount: 0.1 }}
-                    transition={{ duration: 0.4, ease: 'easeOut', delay: index * 0.08 }}
-                  >
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 md:gap-8 lg:gap-[60px]">
-                      <span className="font-ptserif text-3xl sm:text-4xl md:text-[48px] leading-[1.2] sm:leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.4px] text-[#121212] font-normal shrink-0">
-                        {stat.number}
-                      </span>
-                      <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-[24px] md:leading-[27px] tracking-[-0.2px] sm:tracking-[-0.3px] text-[#5E5E5E] w-full sm:max-w-[425px]">
-                        {stat.description}
-                      </p>
-                    </div>
-                    {index < stats.length - 1 && (
-                      <div className="w-full h-px bg-[#C6C7CC] mt-6 sm:mt-7" />
-                    )}
+                      key={index}
+                      initial={{ y: 25, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      viewport={{ once: false, amount: 0.1 }}
+                      transition={{ duration: 0.4, ease: 'easeOut', delay: index * 0.08 }}
+                    >
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 md:gap-8 lg:gap-[60px]">
+                        <span className="font-ptserif text-3xl sm:text-4xl md:text-[48px] leading-[1.2] sm:leading-[1.1] tracking-[-1.5px] sm:tracking-[-2.4px] text-[#121212] font-normal shrink-0">
+                          {stat.number}
+                        </span>
+                        <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-[24px] md:leading-[27px] tracking-[-0.2px] sm:tracking-[-0.3px] text-[#5E5E5E] w-full sm:max-w-[425px]">
+                          {stat.description}
+                        </p>
+                      </div>
+                      {index < stats.length - 1 && (
+                        <div className="w-full h-px bg-[#C6C7CC] mt-6 sm:mt-7" />
+                      )}
                     </motion.div>
                   </div>
-                  
+
                 ))}
               </div>
 
@@ -361,22 +368,15 @@ export default function Home() {
           Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
         </h2>
 
-        {/* Vision Cards — vertical stack on mobile, 4-col on desktop */}
-        <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 lg:gap-5 max-w-[1440px] mx-auto">
-        <div
-          className="flex flex-row"
-          style={{ gap: '13px', width: '1360px' }}
-        >
+        {/* Vision Cards — vertical stack on mobile/tablet, 4-col row on desktop */}
+        <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 lg:gap-[13px] max-w-[1440px] mx-auto lg:w-[1360px]">
           {CARDS.map((card) => (
             <div
               key={card.title}
+              className="w-full lg:w-[325px] lg:shrink-0 h-auto lg:h-[450px] p-6 sm:p-7 lg:p-8"
               style={{
-                width: '325px',
-                height: '450px',
                 background: card.bg,
                 borderRadius: '6px',
-                padding: '32px',
-                flexShrink: 0,
                 display: 'flex',
                 flexDirection: 'column',
                 position: 'relative',
@@ -385,15 +385,12 @@ export default function Home() {
             >
               {/* Card title */}
               <h3
+                className="text-2xl sm:text-[28px] lg:text-[32px] leading-[1.25] sm:leading-[36px] lg:leading-[42px] tracking-[-0.8px] sm:tracking-[-1.1px] lg:tracking-[-1.28px] mb-2 sm:mb-3 lg:mb-4"
                 style={{
                   fontFamily: "'Geist', sans-serif",
                   fontWeight: 500,
-                  fontSize: '32px',
-                  lineHeight: '42px',
-                  letterSpacing: '-1.28px',
                   color: card.textColor,
                   whiteSpace: 'pre-line',
-                  marginBottom: '16px',
                   marginTop: 0,
                 }}
               >
@@ -402,12 +399,10 @@ export default function Home() {
 
               {/* Card body */}
               <p
+                className="text-sm sm:text-[15px] lg:text-base leading-[20px] sm:leading-[22px] lg:leading-6 tracking-[-0.28px] lg:tracking-[-0.32px]"
                 style={{
                   fontFamily: "'Geist', sans-serif",
                   fontWeight: 500,
-                  fontSize: '16px',
-                  lineHeight: '24px',
-                  letterSpacing: '-0.32px',
                   color: card.textColor,
                   margin: 0,
                 }}
@@ -415,17 +410,23 @@ export default function Home() {
                 {card.body}
               </p>
 
-              {/* ── Icon ── */}
-              <div style={{ position: 'absolute', bottom: '32px', left: '32px' }}>
-                <img 
-                  src={card.icon} 
-                  alt={card.title} 
-                  style={{ width: '80px', height: '80px', objectFit: 'contain' }}
+              {/* ── Icon — desktop only ── */}
+              <div className="hidden lg:block absolute bottom-8 left-8">
+                <img
+                  src={card.icon}
+                  alt={card.title}
+                  style={{
+                    width: '80px',
+                    height: '80px',
+                    objectFit: 'contain',
+                    filter: card.invertIcon ? 'brightness(0) invert(1)' : 'none',
+                    transform: `scale(${card.iconScale || 1})`,
+                    transformOrigin: 'bottom left',
+                  }}
                 />
               </div>
             </div>
           ))}
-        </div>
         </div>
       </section>
 

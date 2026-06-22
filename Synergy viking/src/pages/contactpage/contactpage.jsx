@@ -39,7 +39,7 @@ function Toast({ type, message, onClose }) {
 
       {isSuccess
         ? <CheckCircle size={20} style={{ color: "#22c55e", flexShrink: 0, marginTop: 1 }} />
-        : <XCircle    size={20} style={{ color: "#ef4444", flexShrink: 0, marginTop: 1 }} />
+        : <XCircle size={20} style={{ color: "#ef4444", flexShrink: 0, marginTop: 1 }} />
       }
 
       <div style={{ flex: 1 }}>
@@ -58,6 +58,45 @@ function Toast({ type, message, onClose }) {
   );
 }
 
+// ─── Validation helpers ────────────────────────────────────────────────────
+// Accepts international formats like: +91 98765 43210, +971 50 123 4567,
+// (555) 123-4567, 555-123-4567, etc. Requires 7–15 digits total.
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const PHONE_REGEX = /^\+?[\d\s\-().]{7,20}$/;
+
+function isValidPhone(value) {
+  if (!PHONE_REGEX.test(value)) return false;
+  const digitCount = value.replace(/\D/g, '').length;
+  return digitCount >= 7 && digitCount <= 15;
+}
+
+function validateForm(data) {
+  const errors = {};
+
+  if (!data.firstname.trim()) errors.firstname = 'First name is required.';
+  if (!data.lastname.trim()) errors.lastname = 'Last name is required.';
+
+  if (!data.email.trim()) {
+    errors.email = 'Email is required.';
+  } else if (!EMAIL_REGEX.test(data.email.trim())) {
+    errors.email = 'Enter a valid email address.';
+  }
+
+  if (!data.phone.trim()) {
+    errors.phone = 'Phone number is required.';
+  } else if (!isValidPhone(data.phone.trim())) {
+    errors.phone = 'Enter a valid phone number (with country code if outside India).';
+  }
+
+  return errors;
+}
+
+// ─── Reusable field wrapper ─────────────────────────────────────────────────
+function FieldError({ message }) {
+  if (!message) return null;
+  return <p className="mt-1 text-sm text-red-500">{message}</p>;
+}
+
 function ContactPage() {
   const [formData, setFormData] = useState({
     firstname: '',
@@ -67,22 +106,39 @@ function ContactPage() {
     phone: '',
     message: ''
   });
-  
+
+  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+
+    // Clear that field's error as soon as the user starts fixing it
+    if (errors[name]) {
+      setErrors(prev => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const validationErrors = validateForm(formData);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      setToast({ type: "error", message: "Please fix the highlighted fields and try again." });
+      return;
+    }
+
     setLoading(true);
-    
     const result = await submitContactForm(formData);
     setLoading(false);
-    
+
     if (result.ok) {
       setToast({ type: "success", message: "Our team will get back to you shortly." });
       setFormData({
@@ -93,10 +149,17 @@ function ContactPage() {
         phone: '',
         message: ''
       });
+      setErrors({});
     } else {
       setToast({ type: "error", message: "Something went wrong. Please try again later." });
     }
   };
+
+  const inputClass = (field) =>
+    `w-full border rounded px-4 py-4 focus:outline-none focus:ring-1 transition-colors ${errors[field]
+      ? 'border-red-500 focus:ring-red-500 focus:border-red-500'
+      : 'border-gray-300 focus:ring-[#00A3FF] focus:border-[#00A3FF]'
+    }`;
 
   return (
     <>
@@ -110,41 +173,41 @@ function ContactPage() {
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative w-full bg-[#00151C] pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-[7px] lg:pb-[120px] lg:px-10">
-        {/* Label */}
-        <div className="flex items-center gap-3 md:gap-[17px] mb-6 md:mb-8">
-          <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
-          <span className="text-sm md:text-lg leading-[21px] tracking-[-0.28px] uppercase text-white font-geist-mono font-normal">
-            Contact 
-          </span>
-        </div>
+          {/* Label */}
+          <div className="flex items-center gap-3 md:gap-[17px] mb-6 md:mb-8">
+            <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
+            <span className="text-sm md:text-lg leading-[21px] tracking-[-0.28px] uppercase text-white font-geist-mono font-normal">
+              Contact
+            </span>
+          </div>
 
-        {/* Heading */}
-        <h2 className="max-w-full lg:-mt-[50px] xl:-mt-[50px] lg:max-w-[1051px] lg:ml-[205px] text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] leading-tight md:leading-[1.2] lg:leading-[72px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal font-ptserif">
-        Talk with us and get a quote
-        </h2>
-      </section>
+          {/* Heading */}
+          <h2 className="max-w-full lg:-mt-[50px] xl:-mt-[50px] lg:max-w-[1051px] lg:ml-[205px] text-[28px] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[60px] leading-tight md:leading-[1.2] lg:leading-[72px] tracking-[-1px] sm:tracking-[-1.5px] md:tracking-[-2px] xl:tracking-[-2.2px] text-white font-normal font-ptserif">
+            Talk with us and get a quote
+          </h2>
+        </section>
 
         {/* Main Content Section */}
         <section className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-            
+
             {/* Left Column: Contact Details */}
             <div>
               <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-12">
                 Contact details
               </h2>
-              
+
               <div className="space-y-8">
                 <div>
                   <p className="text-sm text-gray-500 uppercase mb-1">EMAIL & SUPPORT</p>
                   <p className="text-xl md:text-2xl text-gray-900">Synergy@support.com</p>
                 </div>
-                
+
                 <div>
                   <p className="text-sm text-gray-500 uppercase mb-1">PHONE</p>
-                  <p className="text-xl md:text-2xl text-gray-900">+91 83296 01548</p>
+                  <p className="text-xl md:text-2xl text-gray-900"></p>
                 </div>
-                
+
                 <div>
                   <p className="text-sm text-gray-500 uppercase mb-1">ADDRESS</p>
                   <p className="text-xl md:text-2xl text-gray-900 leading-snug">
@@ -158,66 +221,76 @@ function ContactPage() {
 
             {/* Right Column: Contact Form */}
             <div>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  name="firstname"
-                  placeholder="First Name*"
-                  required
-                  value={formData.firstname}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-4 py-4 focus:outline-none focus:ring-1 focus:ring-[#00A3FF] focus:border-[#00A3FF] transition-colors"
-                />
-                
-                <input
-                  type="text"
-                  name="lastname"
-                  placeholder="Last Name*"
-                  required
-                  value={formData.lastname}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-4 py-4 focus:outline-none focus:ring-1 focus:ring-[#00A3FF] focus:border-[#00A3FF] transition-colors"
-                />
-                
-                <input 
-                  type="email"
-                  name="email"
-                  placeholder="Email*"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-4 py-4 focus:outline-none focus:ring-1 focus:ring-[#00A3FF] focus:border-[#00A3FF] transition-colors"
-                />
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                <div>
                   <input
                     type="text"
-                    name="location"
-                    placeholder="Location"
-                    value={formData.location}
+                    name="firstname"
+                    placeholder="First Name*"
+                    value={formData.firstname}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-4 py-4 focus:outline-none focus:ring-1 focus:ring-[#00A3FF] focus:border-[#00A3FF] transition-colors"
+                    className={inputClass('firstname')}
                   />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone*"
-                    required
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full border border-gray-300 rounded px-4 py-4 focus:outline-none focus:ring-1 focus:ring-[#00A3FF] focus:border-[#00A3FF] transition-colors"
-                  />
+                  <FieldError message={errors.firstname} />
                 </div>
-                
+
+                <div>
+                  <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Last Name*"
+                    value={formData.lastname}
+                    onChange={handleChange}
+                    className={inputClass('lastname')}
+                  />
+                  <FieldError message={errors.lastname} />
+                </div>
+
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className={inputClass('email')}
+                  />
+                  <FieldError message={errors.email} />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+                  <div>
+                    <input
+                      type="text"
+                      name="location"
+                      placeholder="Location"
+                      value={formData.location}
+                      onChange={handleChange}
+                      className={inputClass('location')}
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone*"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className={inputClass('phone')}
+                    />
+                    <FieldError message={errors.phone} />
+                  </div>
+                </div>
+
                 <textarea
                   name="message"
                   placeholder="Message"
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded px-4 py-4 focus:outline-none focus:ring-1 focus:ring-[#00A3FF] focus:border-[#00A3FF] transition-colors resize-y"
+                  className={`${inputClass('message')} resize-y`}
                 ></textarea>
-                
+
                 <button
                   type="submit"
                   disabled={loading}
@@ -244,7 +317,7 @@ function ContactPage() {
                 </button>
               </form>
             </div>
-            
+
           </div>
         </section>
       </div>

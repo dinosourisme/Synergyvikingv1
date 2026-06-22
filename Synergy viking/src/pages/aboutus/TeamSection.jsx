@@ -31,7 +31,7 @@ function TeamSection() {
           {TEAM.map((member) => (
             <div
               key={member.name}
-              className="border border-brand-line rounded-md overflow-hidden flex flex-col transition-all duration-300 lg:hover:shadow-lg lg:hover:border-[#00B1F1]/30"
+              className="border border-[#C6C7CC] rounded-md overflow-hidden flex flex-col transition-all duration-300 lg:hover:shadow-lg lg:hover:border-[#00B1F1]/30"
             >
               <img
                 src={member.photo}

@@ -69,7 +69,7 @@ export default function Services() {
           <div key={service.number} className="mb-12 md:mb-16 lg:mb-[80px] last:mb-0">
             <div className="flex flex-col md:flex-row md:gap-8 lg:gap-[80px]">
               {/* Number */}
-              <div className="text-4xl sm:text-5xl md:text-[48px] leading-[1.2] md:leading-[58px] tracking-[-1.5px] sm:tracking-[-2px] md:tracking-[-2.4px] font-medium text-[#00B1F1] mb-2 md:mb-0 md:shrink-0">
+              <div className="text-4xl sm:text-5xl md:text-[48px] leading-[1.2] md:leading-[58px] tracking-[-1.5px] sm:tracking-[-2px] md:tracking-[-2.4px] font-medium text-[#00B1F1] mb-2 md:mb-0 md:shrink-0 lg:w-[125px]">
                 {service.number}
               </div>
 

@@ -1,4 +1,3 @@
-import founderPhoto from '../../assets/aboutusfolder/founder-photo.png';
 import backgroundPhoto from '../../assets/aboutusfolder/Background Pattern.svg'
 // by Siddhi Vejare (18 june 2026)
 
@@ -8,11 +7,11 @@ function FounderSection() {
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row rounded-md overflow-hidden">
           {/* Photo — first on mobile, right on desktop */}
-          <div className="w-full md:w-1/2 lg:w-[680px] h-[260px] sm:h-[320px] md:h-[600px] lg:h-[750px] order-first md:order-last">
+          <div className="w-full md:w-1/2 lg:w-[680px] aspect-[3/4] sm:aspect-[4/5] md:aspect-auto md:h-[600px] lg:h-[750px] order-first md:order-last">
             <img
-              src={founderPhoto}
+              src="https://framerusercontent.com/images/u3rAQCT8X7ghPN2BytIe4QhvQLU.jpg?scale-down-to=2048&width=2329&height=3500"
               alt="Mohak, Founder of Synergy Viking"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
 

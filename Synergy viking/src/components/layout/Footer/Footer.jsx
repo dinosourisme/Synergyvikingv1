@@ -148,7 +148,7 @@ export default function Footer() {
                 href="tel:+9197142580533"
                 className="relative text-sm sm:text-base font-medium tracking-[-0.32px] leading-6 text-white group w-fit inline-block"
               >
-                +91 9714 2580533
+                +91 97142 58053
                 <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
               </a>
             </div>
@@ -213,7 +213,7 @@ export default function Footer() {
                 href="tel:+9197142580533"
                 className="relative text-base font-medium tracking-[-0.32px] leading-6 text-white group w-fit inline-block"
               >
-                +91 9714 2580533
+                +91 97142 58053
                 <span className="absolute left-0 bottom-0 w-0 h-[1px] bg-white transition-all duration-300 group-hover:w-full" />
               </a>
             </div>

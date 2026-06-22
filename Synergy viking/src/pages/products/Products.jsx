@@ -57,7 +57,7 @@ export default function Products() {
       <section className="w-full max-w-[1440px] mx-auto px-5 sm:px-6 md:px-8 lg:px-10 pt-8 sm:pt-10 md:pt-[45px] pb-10 sm:pb-12 md:pb-[60px]">
         <div className="flex items-center gap-2 sm:gap-[15px] w-full">
           {/* Search Input */}
-          <div className="flex items-center gap-2 flex-1 h-12 sm:h-14 md:h-16 px-4 sm:px-5 md:px-[30px] bg-[rgba(247,247,247,0.97)] rounded-full">
+          <div className="flex items-center gap-2 flex-1 h-12 sm:h-14 md:h-16 px-4 sm:px-5 md:px-[30px] bg-[rgba(247,247,247,0.97)] rounded-full border border-transparent focus-within:border-[#00B1F1] transition-colors">
             <input
               id="product-search"
               type="text"
