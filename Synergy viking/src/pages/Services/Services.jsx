@@ -47,27 +47,27 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative w-full bg-[#00151C]">
 
-  {/* ✅ Inner div matches services section: max-w + mx-auto + all padding inside */}
-  <div className="max-w-[90rem] mx-auto pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-2 lg:pb-[7.5rem] lg:px-10">
+        {/* ✅ Inner div matches services section: max-w + mx-auto + all padding inside */}
+        <div className="max-w-[90rem] mx-auto pt-4 pb-16 px-5 sm:px-6 md:px-8 lg:pt-2 lg:pb-[7.5rem] lg:px-10">
 
-    {/* Label */}
-    <div className="flex items-center gap-3 md:gap-[1.0625rem] mb-6 md:mb-8">
-      <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
-      <span className="text-sm md:text-lg leading-relaxed tracking-tight uppercase text-white font-geist-mono font-normal">
-        OUR Services
-      </span>
-    </div>
+          {/* Label */}
+          <div className="flex items-center gap-3 md:gap-[1.0625rem] mb-6 md:mb-8">
+            <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
+            <span className="text-sm md:text-lg leading-relaxed tracking-tight uppercase text-white font-geist-mono font-normal">
+              OUR Services
+            </span>
+          </div>
 
-    {/* Heading — flex spacer mirrors services row layout */}
-    <div className="flex flex-col lg:flex-row lg:gap-[5rem]">
-      <div className="hidden lg:block lg:shrink-0 lg:w-[7.8125rem]" />
-      <h2 className="flex-1 max-w-full lg:-mt-[3.125rem] xl:-mt-[3.125rem] lg:max-w-[65.6875rem] text-[1.75rem] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.75rem] leading-tight md:leading-[1.2] lg:leading-[4.5rem] tracking-tight text-white font-normal font-ptserif">
-        Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
-      </h2>
-    </div>
+          {/* Heading — flex spacer mirrors services row layout */}
+          <div className="flex flex-col lg:flex-row lg:gap-[5rem]">
+            <div className="hidden lg:block lg:shrink-0 lg:w-[7.8125rem]" />
+            <h2 className="flex-1 max-w-full lg:-mt-[3.125rem] xl:-mt-[3.125rem] lg:max-w-[65.6875rem] text-[1.75rem] sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.75rem] leading-tight md:leading-[1.2] lg:leading-[4.5rem] tracking-tight text-white font-normal font-ptserif">
+              Our goal is to be recognised as the most trusted, safety-first diving equipment company serving the global offshore and subsea industry.
+            </h2>
+          </div>
 
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* Divider */}
       <div className="w-full h-px bg-black/30" />
