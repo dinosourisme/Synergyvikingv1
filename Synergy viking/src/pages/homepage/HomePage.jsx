@@ -202,18 +202,18 @@ export default function Home() {
 
       {/* Introduction Section */}
       <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[3.75rem] px-5 sm:px-6 md:px-8 lg:px-10">
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 sm:gap-12 lg:gap-12 max-w-[90rem] mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 sm:gap-12 lg:gap-[3.75rem] max-w-[90rem] mx-auto">
           {/* Left Image */}
-          <div className="w-full lg:w-1/2 xl:w-[42.5rem] aspect-square rounded-md overflow-hidden shrink-0">
+          <div className="w-full lg:w-1/2 rounded-md overflow-hidden shrink-0">
             <img
               src={introImage}
               alt="Introduction"
-              className="w-full h-full object-cover"
+              className="w-full h-auto object-cover"
             />
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col gap-8 sm:gap-10 lg:mt-[1.875rem] lg:gap-[3.75rem] w-full lg:w-1/2 xl:w-[39.5rem]">
+          <div className="flex flex-col gap-8 sm:gap-10 lg:gap-[3.75rem] w-full lg:w-1/2">
             <h2 className="font-ptserif text-xl sm:text-2xl md:text-[1.625rem] lg:text-[1.875rem] leading-[1.4] tracking-tight text-[#121212] font-normal">
               Experience a complete, uncompromising approach to commercial diving equipment ; from first design brief to final delivery, backed by a team that stays with you long after the job is done.
             </h2>
@@ -485,7 +485,7 @@ export default function Home() {
       </section>
 
       {/* Products Preview Section */}
-      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[3.125rem] px-5 sm:px-6 md:px-8 lg:px-10">
+      <section className="relative w-full bg-white py-16 sm:py-20 md:py-24 lg:py-[3.125rem] px-5 sm:px-6 md:px-8 lg:px-12">
         {/* Label */}
         <div className="flex items-center gap-3 md:gap-[1.0625rem] mb-6 sm:mb-8 lg:mb-[1.875rem]">
           <div className="w-2.5 h-2.5 md:w-3 md:h-3 bg-[#00B1F1]" />
