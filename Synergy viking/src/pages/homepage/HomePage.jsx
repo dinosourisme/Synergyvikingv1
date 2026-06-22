@@ -147,7 +147,7 @@ export default function Home() {
         <img
           src={heroBg}
           alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[65%_center] md:object-top"
         />
 
         {/* Header spacer */}
